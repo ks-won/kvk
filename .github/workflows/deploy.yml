@@ -28,7 +28,7 @@ jobs:
         run: node scripts/download.js
       
       - name: Analyze Data
-        run: node scripts/analyze.js
+        run: node scripts/analyse.js
     
       - name: Calculate Rankings
         run: node scripts/rankings.js
