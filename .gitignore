@@ -2,6 +2,6 @@
 .DS_Store
 .Trashes
 
-results/*
+output/*
 
 web/data.json

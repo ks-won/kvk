@@ -1,8 +1,8 @@
 const fs = require('fs/promises');
 const path = require('path');
 
-const DATA_DIR = path.join(__dirname, '../results/seasons');
-const OUTPUT_JSON = path.join(__dirname, '../results/rankings.json');
+const DATA_DIR = path.join(__dirname, '../data');
+const OUTPUT_JSON = path.join(__dirname, '../output/rankings.json');
 
 // PREP: Stable, Age-weighted
 const PREP_K = 32;

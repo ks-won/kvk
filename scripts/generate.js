@@ -2,8 +2,8 @@ const fs = require('fs/promises');
 const path = require('path');
 
 async function buildSiteData() {
-	const historyPath = path.join(__dirname, '../results/rankings.json');
-	const analysisPath = path.join(__dirname, '../results/analysis.json');
+	const historyPath = path.join(__dirname, '../output/rankings.json');
+	const analysisPath = path.join(__dirname, '../output/analysis.json');
 	const outputPath = path.join(__dirname, '../web/data.json');
 
 	const history = JSON.parse(await fs.readFile(historyPath, 'utf8'));

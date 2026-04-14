@@ -1,8 +1,8 @@
 const fs = require('fs/promises');
 const path = require('path');
 
-const DATA_DIR = path.join(__dirname, '../results/seasons');
-const OUTPUT_FILE = path.join(__dirname, '../results/analysis.json');
+const DATA_DIR = path.join(__dirname, '../data');
+const OUTPUT_FILE = path.join(__dirname, '../output/analysis.json');
 
 async function compile() {
 	try {

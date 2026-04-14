@@ -2,7 +2,7 @@ const fs = require('fs/promises');
 const path = require('path');
 
 const BASE_URL = 'https://kingshot.net/api/kvk';
-const OUTPUT_DIR = path.join(__dirname, '../results/seasons');
+const OUTPUT_DIR = path.join(__dirname, '../data');
 const LIMIT = 100; // Max items per page as requested
 
 /**
