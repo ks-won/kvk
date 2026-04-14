@@ -25,17 +25,17 @@ jobs:
           node-version: '24'
           cache: 'npm'
 
-	  - name: Download Season Data
-		run: node scripts/download.js
-	  
-	  - name: Analyze Data
-		run: node scripts/analyze.js
-	
-	  - name: Calculate Rankings
-		run: node scripts/rankings.js
-	
-	  - name: Generate Site Data
-		run: node scripts/generate.js
+      - name: Download Season Data
+        run: node scripts/download.js
+      
+      - name: Analyze Data
+        run: node scripts/analyze.js
+    
+      - name: Calculate Rankings
+        run: node scripts/rankings.js
+    
+      - name: Generate Site Data
+        run: node scripts/generate.js
 
       - name: Update Keep-Alive File
         run: |
