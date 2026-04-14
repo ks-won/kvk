@@ -11,7 +11,11 @@ const LIMIT = 100; // Max items per page as requested
 async function fetchApi(endpoint) {
 	const url = `${BASE_URL}${endpoint}`;
     console.log(`Fetching: ${url}`);
-	const response = await fetch(url);
+    const headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36...',
+        'Accept': 'application/json',
+    };
+	const response = await fetch(url, { headers });
     console.log(`Received response: ${response.status} ${response.statusText}`);
 	const result = await response.json();
 
