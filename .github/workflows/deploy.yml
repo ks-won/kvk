@@ -1,0 +1,60 @@
+name: Weekly Build and Deploy
+
+on:
+  schedule:
+    # Runs at 00:00 every Saturday (Midnight UTC Friday/Saturday)
+    - cron: '0 0 * * 6'
+  workflow_dispatch: # Allows manual trigger for testing
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  actions: read
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+	  - name: Download Season Data
+		run: node scripts/download.js
+	  
+	  - name: Analyze Data
+		run: node scripts/analyze.js
+	
+	  - name: Calculate Rankings
+		run: node scripts/rankings.js
+	
+	  - name: Generate Site Data
+		run: node scripts/generate.js
+
+      - name: Update Keep-Alive File
+        run: |
+          echo "Last successful run: $(date)" > lastrun.txt
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add lastrun.txt
+          git commit -m "chore: update lastrun.txt" || echo "No changes to commit"
+          git push
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v6
+
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: 'web'
+          retention-days: 1
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
