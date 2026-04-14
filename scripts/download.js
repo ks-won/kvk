@@ -17,6 +17,8 @@ async function fetchApi(endpoint) {
     };
 	const response = await fetch(url, { headers });
     console.log(`Received response: ${response.status} ${response.statusText}`);
+
+    console.log(response.body);
 	const result = await response.json();
 
 	if (!response.ok || result.status === 'error') {
