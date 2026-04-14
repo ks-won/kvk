@@ -1,0 +1,7 @@
+# macOS
+.DS_Store
+.Trashes
+
+results/*
+
+web/data.json
