@@ -10,7 +10,9 @@ const LIMIT = 100; // Max items per page as requested
  */
 async function fetchApi(endpoint) {
 	const url = `${BASE_URL}${endpoint}`;
+    console.log(`Fetching: ${url}`);
 	const response = await fetch(url);
+    console.log(`Received response: ${response.status} ${response.statusText}`);
 	const result = await response.json();
 
 	if (!response.ok || result.status === 'error') {
