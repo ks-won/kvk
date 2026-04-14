@@ -3,5 +3,6 @@
 .Trashes
 
 output/*
+!output/.gitkeep
 
 web/data.json
