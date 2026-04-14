@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>KvK Analytics Hub</title>
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+	<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans">
+	<div id="app" class="container mx-auto px-4 py-8">
+		
+		<header class="mb-8 text-center">
+			<h1 class="text-4xl font-bold text-yellow-500 mb-2 cursor-pointer" @click="goHome">KVK PERFORMANCE INDEX</h1>
+			<p class="text-gray-400 font-medium tracking-wide">Hybrid Elo Analytics & Trend Tracking</p>
+		</header>
+
+		<div v-if="!selectedId" class="bg-gray-800 rounded-3xl shadow-2xl overflow-hidden animate-fadeIn border border-gray-700">
+			<div class="p-6 border-b border-gray-700 bg-gray-900/30 flex flex-col lg:flex-row justify-between items-center gap-6">
+				<div class="flex flex-col md:flex-row gap-4 w-full lg:w-auto">
+					<input v-model="search" type="text" placeholder="Search ID..." class="bg-gray-700 text-white px-5 py-3 rounded-xl focus:ring-2 focus:ring-yellow-500 outline-none border border-gray-600 w-full md:w-64 transition-all">
+					
+					<select v-model="selectedPersona" class="bg-gray-700 text-white px-5 py-3 rounded-xl focus:ring-2 focus:ring-yellow-500 outline-none border border-gray-600 cursor-pointer transition-all">
+						<option value="All">All Classifications</option>
+						<option v-for="(desc, name) in PERSONA_MAP" :key="name" :value="name">{{ name }}</option>
+					</select>
+				</div>
+				<div class="text-xs text-gray-500 uppercase font-black tracking-widest hidden md:block text-right">
+					Analyzing {{ filteredKingdoms.length }} Kingdoms<br>
+					<span class="opacity-50 font-normal">Click rows for deep scouting</span>
+				</div>
+			</div>
+
+			<div class="overflow-x-auto">
+				<table class="w-full text-left border-collapse">
+					<thead>
+						<tr class="bg-gray-900/50 text-yellow-500 uppercase text-[10px] font-black tracking-[0.2em]">
+							<th @click="sortBy('id')" class="px-8 py-5 cursor-pointer hover:bg-gray-700 transition">Kingdom</th>
+							<th @click="sortBy('prep_elo')" class="px-8 py-5 cursor-pointer hover:bg-gray-700 transition text-center">Prep Elo</th>
+							<th @click="sortBy('castle_elo')" class="px-8 py-5 cursor-pointer hover:bg-gray-700 transition text-center">Castle Elo</th>
+							<th class="px-8 py-5 text-center">Classification</th>
+						</tr>
+					</thead>
+					<tbody class="divide-y divide-gray-700/50">
+						<tr v-for="k in filteredKingdoms" :key="k.id" 
+							@click="selectKingdom(k.id)"
+							class="hover:bg-gray-700/50 cursor-pointer transition group">
+							<td class="px-8 py-5">
+								<span class="font-mono text-xl font-bold group-hover:text-yellow-500 transition">#{{ k.id }}</span>
+							</td>
+							<td class="px-8 py-5 text-center">
+								<div class="font-black text-blue-400 text-xl">{{ k.latest.prep_elo }}</div>
+								<div class="text-[10px] text-gray-500 font-bold">{{ k.latest.prep_elo_percentile }}th %</div>
+							</td>
+							<td class="px-8 py-5 text-center">
+								<div class="font-black text-red-400 text-xl">{{ k.latest.castle_elo }}</div>
+								<div class="text-[10px] text-gray-500 font-bold">{{ k.latest.castle_elo_percentile }}th %</div>
+							</td>
+							<td class="px-8 py-5 text-center">
+								<span :class="getPersonaClass(k)" class="px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest border">
+									{{ getPersona(k) }}
+								</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div v-else-if="currentKingdom" class="animate-fadeIn">
+			<nav class="mb-8 flex justify-between items-center">
+				<button @click="goHome" class="bg-gray-800 hover:bg-gray-700 text-yellow-500 px-6 py-3 rounded-2xl font-bold flex items-center gap-3 transition shadow-lg border border-gray-700">
+					<span class="text-xl">←</span> Back to Leaderboard
+				</button>
+				<div class="text-gray-600 text-sm font-mono bg-gray-800/50 px-4 py-2 rounded-lg border border-gray-700">K-ID: {{currentKingdom.id}}</div>
+			</nav>
+			
+			<div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+				<div class="space-y-8">
+					<div class="bg-gray-800 p-8 rounded-[2.5rem] shadow-2xl border-b-[12px] border-yellow-600 relative overflow-hidden">
+						<div class="relative z-10">
+							<h2 class="text-7xl font-black mb-2 tracking-tighter italic">#{{ currentKingdom.id }}</h2>
+							<div class="mb-8">
+								<p class="text-2xl text-yellow-500 font-black uppercase tracking-widest mb-2">{{ getPersona(currentKingdom) }}</p>
+								<div class="bg-black/20 p-4 rounded-xl border border-white/5">
+									<p class="text-xs text-gray-300 leading-relaxed font-medium uppercase tracking-tighter">{{ getPersonaDescription(currentKingdom) }}</p>
+								</div>
+							</div>
+							
+							<div class="space-y-4">
+								<div v-for="type in ['prep', 'castle']" :key="type" class="bg-gray-900/80 backdrop-blur p-6 rounded-2xl border border-gray-700 flex justify-between items-center">
+									<div>
+										<div :class="type === 'prep' ? 'text-blue-400' : 'text-red-400'" class="text-[10px] uppercase font-black tracking-[0.2em] mb-1">{{ type }} Elo</div>
+										<div class="flex items-center gap-3">
+											<span class="text-4xl font-black tracking-tighter">{{ currentKingdom.latest[type + '_elo'] }}</span>
+											<span v-if="getEloDelta(currentKingdom, type)" 
+												  :class="getEloDelta(currentKingdom, type) > 0 ? 'text-green-400 bg-green-400/10 border-green-500/20' : 'text-red-400 bg-red-400/10 border-red-500/20'" 
+												  class="text-[11px] font-black px-2 py-1 rounded-lg border">
+												{{ getEloDelta(currentKingdom, type) > 0 ? '▲' : '▼' }} {{ Math.abs(getEloDelta(currentKingdom, type)) }}
+											</span>
+										</div>
+									</div>
+									<div class="text-right">
+										<div class="text-gray-500 text-[10px] uppercase font-bold tracking-widest">Global %</div>
+										<div class="text-2xl font-black text-gray-400 leading-none">{{ currentKingdom.latest[type + '_elo_percentile'] }}</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="bg-gray-800 p-8 rounded-[2.5rem] shadow-xl border border-gray-700">
+						<h3 class="text-[10px] font-black uppercase tracking-[0.3em] text-gray-500 mb-6">Historical Momentum</h3>
+						<table class="w-full text-xs">
+							<thead>
+								<tr class="text-left text-gray-600 border-b border-gray-700/50">
+									<th class="pb-3 font-black">Season / Opponent</th>
+									<th class="pb-3 text-center">Prep Elo</th>
+									<th class="pb-3 text-center">Castle Elo</th>
+								</tr>
+							</thead>
+							<tbody class="divide-y divide-gray-700/30">
+								<tr v-for="(h, idx) in sortedHistory" :key="h.season" class="group hover:bg-gray-700/20 transition">
+									<td class="py-4">
+										<div class="font-black text-gray-400 uppercase tracking-tighter">S{{ h.season }}</div>
+										<div v-if="getOpponentForSeason(h.season)" class="text-[9px] text-gray-500 font-bold italic">
+											vs #{{ getOpponentForSeason(h.season) }}
+										</div>
+									</td>
+									<td class="py-4 text-center">
+										<div class="flex items-center justify-center gap-2">
+											<span class="font-bold text-gray-200">{{ h.prep_elo }}</span>
+											<span v-if="getStepDelta(idx, 'prep')" 
+												  :class="getStepDelta(idx, 'prep') > 0 ? 'text-green-500' : 'text-red-500'" 
+												  class="text-[10px] font-black">
+												{{ getStepDelta(idx, 'prep') > 0 ? '+' : '' }}{{ getStepDelta(idx, 'prep') }}
+											</span>
+										</div>
+									</td>
+									<td class="py-4 text-center">
+										<div class="flex items-center justify-center gap-2">
+											<span class="font-bold text-gray-200">{{ h.castle_elo }}</span>
+											<span v-if="getStepDelta(idx, 'castle')" 
+												  :class="getStepDelta(idx, 'castle') > 0 ? 'text-green-500' : 'text-red-500'" 
+												  class="text-[10px] font-black">
+												{{ getStepDelta(idx, 'castle') > 0 ? '+' : '' }}{{ getStepDelta(idx, 'castle') }}
+											</span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="lg:col-span-2 space-y-8">
+					<div class="bg-gray-800 rounded-[2.5rem] shadow-2xl overflow-hidden border border-gray-700">
+						<div class="px-10 py-6 border-b border-gray-700 bg-gray-900/30">
+							<h3 class="font-black uppercase text-[10px] tracking-[0.4em] text-gray-500">Combat History Log</h3>
+						</div>
+						<div class="divide-y divide-gray-700/50">
+							<div v-for="m in currentKingdom.matches.slice(-10).reverse()" 
+								 @click="selectKingdom(getOpponentId(m))"
+								 class="flex items-center justify-between p-8 hover:bg-gray-700/30 transition cursor-pointer group">
+								<div class="flex items-center gap-8">
+									<div class="bg-gray-900 text-yellow-500 text-[10px] font-black px-3 py-2 rounded-xl border border-yellow-500/20 shadow-inner">S{{ m.season }}</div>
+									<div class="text-3xl font-black group-hover:text-yellow-500 transition-colors tracking-tighter">
+										<span class="text-gray-600 text-sm font-normal uppercase tracking-widest mr-3">vs</span>#{{ getOpponentId(m) }}
+									</div>
+								</div>
+								<div class="flex gap-4">
+									<div v-for="ph in ['prep', 'castle']" :key="ph"
+										 :title="getResultText(m, ph)" :class="getResultColor(m, ph)" 
+										 class="px-5 py-2.5 rounded-xl text-[10px] font-black uppercase tracking-[0.15em] border shadow-sm transition-all group-hover:scale-105">
+										{{ ph }} phase
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		const { createApp, ref, computed, onMounted } = Vue;
+
+		const PERSONA_MAP = {
+			'Apex Predator': 'Elite-tier kingdom. Dominates both industrial output and high-stakes combat.',
+			'Industrial Giant': 'High activity and resource depth. Often wins the week but struggles in the final combat.',
+			'The Sniper': 'Low baseline activity. Tactics revolve around massive burst power to steal the final objective.',
+			'Balanced Contender': 'Average performance across the board. Reliable results typically dictated by matchup Elo.',
+			'Underdeveloped': 'Lower performance in both metrics. Likely a new or casual kingdom in a rebuilding phase.'
+		};
+
+		createApp({
+			setup() {
+				const kingdoms = ref([]);
+				const search = ref('');
+				const selectedPersona = ref('All');
+				const sortKey = ref('prep_elo');
+				const sortOrder = ref(-1);
+				const selectedId = ref(null);
+
+				const updateFromHash = () => {
+					const hash = window.location.hash.replace('#', '');
+					selectedId.value = hash ? parseInt(hash) : null;
+				};
+
+				onMounted(async () => {
+					const res = await fetch('data.json');
+					kingdoms.value = await res.json();
+					updateFromHash();
+					window.addEventListener('hashchange', updateFromHash);
+				});
+
+				const currentKingdom = computed(() => kingdoms.value.find(k => k.id === selectedId.value));
+				const sortedHistory = computed(() => currentKingdom.value ? [...currentKingdom.value.history].reverse() : []);
+
+				const filteredKingdoms = computed(() => {
+					return kingdoms.value.filter(k => {
+						const matchesSearch = k.id.toString().includes(search.value);
+						const matchesPersona = selectedPersona.value === 'All' || getPersona(k) === selectedPersona.value;
+						return matchesSearch && matchesPersona;
+					}).sort((a, b) => {
+						let valA = sortKey.value === 'id' ? a.id : a.latest[sortKey.value];
+						let valB = sortKey.value === 'id' ? b.id : b.latest[sortKey.value];
+						return (valA - valB) * sortOrder.value;
+					});
+				});
+
+				const getPersona = (k) => {
+					const p = parseInt(k.latest.prep_elo_percentile);
+					const c = parseInt(k.latest.castle_elo_percentile);
+					if (p > 80 && c > 80) return 'Apex Predator';
+					if (p > 75 && c < 50) return 'Industrial Giant';
+					if (p < 50 && c > 75) return 'The Sniper';
+					if (p < 35 && c < 35) return 'Underdeveloped';
+					return 'Balanced Contender';
+				};
+
+				const getEloDelta = (k, type) => {
+					if (k.history.length < 2) return 0;
+					return k.history[k.history.length - 1][type + '_elo'] - k.history[k.history.length - 2][type + '_elo'];
+				};
+
+				const getStepDelta = (idx, type) => {
+					const history = sortedHistory.value;
+					if (idx >= history.length - 1) return null; 
+					return history[idx][type + '_elo'] - history[idx + 1][type + '_elo'];
+				};
+
+				const getOpponentForSeason = (season) => {
+					if (!currentKingdom.value) return null;
+					const m = currentKingdom.value.matches.find(match => match.season === season);
+					if (!m) return null;
+					return m.kingdom_a.id === selectedId.value ? m.kingdom_b.id : m.kingdom_a.id;
+				};
+
+				const getOpponentId = (m) => m.kingdom_a.id === selectedId.value ? m.kingdom_b.id : m.kingdom_a.id;
+				
+				const getResultColor = (m, ph) => {
+					const winner = m[`actual_${ph}_winner`];
+					if (winner === 'Draw') return 'bg-gray-800 text-gray-500 border-gray-700';
+					const won = (m.kingdom_a.id === selectedId.value && winner === 'A') || (m.kingdom_b.id === selectedId.value && winner === 'B');
+					return won ? 'bg-green-400/10 text-green-400 border-green-500/30' : 'bg-red-400/10 text-red-400 border-red-500/30';
+				};
+
+				const getResultText = (m, ph) => {
+					const winner = m[`actual_${ph}_winner`];
+					if (winner === 'Draw') return 'Result: Draw';
+					const won = (m.kingdom_a.id === selectedId.value && winner === 'A') || (m.kingdom_b.id === selectedId.value && winner === 'B');
+					return won ? `Victory over Kingdom ${getOpponentId(m)}` : `Defeat to Kingdom ${getOpponentId(m)}`;
+				};
+
+				const sortBy = (key) => {
+					if (sortKey.value === key) sortOrder.value *= -1;
+					else { sortKey.value = key; sortOrder.value = -1; }
+				};
+
+				return { 
+					search, selectedPersona, filteredKingdoms, sortBy, selectedId, currentKingdom, sortedHistory,
+					getPersona, getPersonaDescription: (k) => PERSONA_MAP[getPersona(k)], getPersonaClass: (k) => {
+						const p = getPersona(k);
+						const classes = { 
+							'Apex Predator': 'bg-purple-900/40 text-purple-300 border-purple-500/50', 
+							'Industrial Giant': 'bg-blue-900/40 text-blue-300 border-blue-500/50', 
+							'The Sniper': 'bg-red-900/40 text-red-300 border-red-500/50', 
+							'Balanced Contender': 'bg-amber-900/30 text-amber-500 border-amber-600/40',
+							'Underdeveloped': 'bg-gray-800/50 text-gray-500 border-gray-700' 
+						};
+						return classes[p] || 'bg-gray-800 text-gray-400 border-gray-700';
+					},
+					getEloDelta, getStepDelta, getOpponentForSeason, getOpponentId, getResultColor, getResultText, PERSONA_MAP,
+					selectKingdom: (id) => { window.location.hash = id; window.scrollTo(0,0); },
+					goHome: () => { window.location.hash = ''; }
+				};
+			}
+		}).mount('#app');
+	</script>
+
+	<style>
+		.animate-fadeIn { animation: fadeIn 0.3s ease-out; }
+		@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+		::-webkit-scrollbar { width: 8px; }
+		::-webkit-scrollbar-track { background: #111827; }
+		::-webkit-scrollbar-thumb { background: #374151; border-radius: 4px; }
+		::-webkit-scrollbar-thumb:hover { background: #4b5563; }
+	</style>
+</body>
+</html>
