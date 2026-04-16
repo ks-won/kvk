@@ -40,6 +40,19 @@
                         
                         <div class="flex flex-wrap gap-4 items-end">
                             <div class="flex flex-col">
+                                <label class="text-[10px] uppercase font-black text-gray-500 mb-1 tracking-widest">Transfer Group</label>
+                                <select v-model="selectedTransfer" class="bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm outline-none focus:border-blue-500 transition cursor-pointer">
+                                    <option :value="null">All Kingdoms</option>
+                                    <template v-for="event in transferEvents" :key="event.id">
+                                        <option disabled class="text-gray-500 font-bold bg-gray-900">--- {{ event.date }} ---</option>
+                                        <option v-for="group in event.groups" :key="event.id + '-' + group.number" :value="group">
+                                            &nbsp;&nbsp;Group {{ group.number }} (K{{ group.min_kingdom }}-{{ group.max_kingdom }})
+                                        </option>
+                                    </template>
+                                </select>
+                            </div>
+
+                            <div class="flex flex-col">
                                 <label class="text-[10px] uppercase font-black text-gray-500 mb-1 tracking-widest">Quick Search</label>
                                 <input v-model="searchQuery" type="number" placeholder="Kingdom #" class="bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm outline-none focus:border-blue-500 transition w-32">
                             </div>
@@ -364,6 +377,7 @@
                 const sortDir = ref(-1);
                 const predictor = reactive({ idA: '', idB: '' });
                 const searchQuery = ref('');
+                const selectedTransfer = ref(null); // Added for filtering
 
                 const calculateProb = (ra, rb) => (1 / (1 + Math.pow(10, (rb - ra) / 400)) * 100).toFixed(1);
                 
@@ -410,12 +424,20 @@
                 window.addEventListener('hashchange', handleRouting);
 
                 return {
-                    loading, data, currentView, routeParams, activeSeasonId, displayMode, predictor, searchQuery,
+                    loading, data, currentView, routeParams, activeSeasonId, displayMode, predictor, searchQuery, selectedTransfer,
                     currentKingdom: computed(() => data.value?.kingdoms[routeParams.id]),
                     reversedHistory: computed(() => data.value?.kingdoms[routeParams.id] ? [...data.value.kingdoms[routeParams.id].history].reverse() : []),
                     currentMatch: computed(() => data.value?.matches[routeParams.id]),
                     currentSeasonRankings: computed(() => data.value?.seasons[data.value.metadata.current_season].rankings[routeParams.id]),
                     
+                    // Maps transfer events for the filter dropdown
+                    transferEvents: computed(() => {
+                        if (!data.value?.transfers) return [];
+                        return Object.entries(data.value.transfers)
+                            .map(([id, event]) => ({ id, ...event }))
+                            .sort((a, b) => new Date(b.date) - new Date(a.date));
+                    }),
+
                     getDeltaFormatted: (k, t, m) => { 
                         const d = getDelta(k, t, m); if (d === null) return '';
                         const mode = m || displayMode.value;
@@ -475,10 +497,17 @@
                         if (!data.value || !activeSeasonId.value) return [];
                         const r = data.value.seasons[activeSeasonId.value].rankings;
                         
-                        // Apply filter and convert to array
                         let list = Object.entries(r).map(([id, stats]) => ({ id, ...stats }));
+                        
+                        // Apply quick search filter
                         if (searchQuery.value) {
                             list = list.filter(k => k.id.toString().includes(searchQuery.value));
+                        }
+
+                        // Apply transfer range filter
+                        if (selectedTransfer.value) {
+                            const { min_kingdom, max_kingdom } = selectedTransfer.value;
+                            list = list.filter(k => parseInt(k.id) >= min_kingdom && parseInt(k.id) <= max_kingdom);
                         }
 
                         // REACTIVE RE-SORTING LOGIC
@@ -488,7 +517,6 @@
                                 vA = parseInt(a.id);
                                 vB = parseInt(b.id);
                             } else {
-                                // Dynamic lookup based on displayMode ensures list re-sorts when mode toggles
                                 vA = a[sortKey.value][displayMode.value];
                                 vB = b[sortKey.value][displayMode.value];
                             }
