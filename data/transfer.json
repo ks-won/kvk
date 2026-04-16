@@ -49,6 +49,8 @@
 				"progress": "Gen 6 Heroes & Pets",
 				"min_kingdom": 1,
 				"max_kingdom": 25,
+				"power_cap_normal": 340000000,
+				"power_cap_leading": 213000000,
 				"leading_kingdoms": [3, 12, 14]
 			},
 			{
@@ -56,6 +58,8 @@
 				"progress": "Truegold 8",
 				"min_kingdom": 26,
 				"max_kingdom": 175,
+				"power_cap_normal": 270000000,
+				"power_cap_leading": 170000000,
 				"leading_kingdoms": [45, 57, 59, 86, 88, 90, 92, 119]
 			},
 			{
@@ -63,6 +67,8 @@
 				"progress": "Gen 5 Heroes & Pets",
 				"min_kingdom": 176,
 				"max_kingdom": 417,
+				"power_cap_normal": 230000000,
+				"power_cap_leading": 145000000,
 				"leading_kingdoms": [199, 219, 231, 240, 255, 302, 321, 401]
 			},
 			{
@@ -70,6 +76,8 @@
 				"progress": "War Academy",
 				"min_kingdom": 418,
 				"max_kingdom": 758,
+				"power_cap_normal": 200000000,
+				"power_cap_leading": 130000000,
 				"leading_kingdoms": [423, 460, 535, 623]
 			},
 			{
@@ -77,6 +85,8 @@
 				"progress": "Gen 4 Heroes & Pets",
 				"min_kingdom": 759,
 				"max_kingdom": 927,
+				"power_cap_normal": 170000000,
+				"power_cap_leading": 110500000,
 				"leading_kingdoms": [759, 764, 772, 790, 795, 809, 810, 838]
 			},
 			{
@@ -84,13 +94,17 @@
 				"progress": "Governor Charm Level 11+",
 				"min_kingdom": 928,
 				"max_kingdom": 1007,
+				"power_cap_normal": 150000000,
+				"power_cap_leading": 97500000,
 				"leading_kingdoms": [932, 946, 950, 959, 960, 1000, 1004]
 			},
 			{
 				"number": 7,
-				"progress":"Truegold 5",
+				"progress": "Truegold 5",
 				"min_kingdom": 1008,
 				"max_kingdom": 1159,
+				"power_cap_normal": 130000000,
+				"power_cap_leading": 84500000,
 				"leading_kingdoms": [1016, 1019, 1034, 1035, 1040, 1041, 1079, 1081]
 			}
 		]
@@ -104,6 +118,8 @@
 				"progress": "Truegold 8",
 				"min_kingdom": 1,
 				"max_kingdom": 6,
+				"power_cap_normal": 270000000,
+				"power_cap_leading": 170000000,
 				"leading_kingdoms": [3]
 			},
 			{
@@ -111,6 +127,8 @@
 				"progress": "Gen 5 Heroes & Pets",
 				"min_kingdom": 7,
 				"max_kingdom": 115,
+				"power_cap_normal": 230000000,
+				"power_cap_leading": 145000000,
 				"leading_kingdoms": [12, 45, 57, 62, 86, 90, 92, 109]
 			},
 			{
@@ -118,6 +136,8 @@
 				"progress": "War Academy",
 				"min_kingdom": 116,
 				"max_kingdom": 417,
+				"power_cap_normal": 200000000,
+				"power_cap_leading": 130000000,
 				"leading_kingdoms": [116, 130, 138, 158, 165, 240, 255, 267, 308]
 			},
 			{
@@ -125,6 +145,8 @@
 				"progress": "Gen 4 Heroes & Pets",
 				"min_kingdom": 418,
 				"max_kingdom": 587,
+				"power_cap_normal": 170000000,
+				"power_cap_leading": 110500000,
 				"leading_kingdoms": [423, 444, 446, 447, 460, 479, 505, 535]
 			},
 			{
@@ -132,6 +154,8 @@
 				"progress": "Governor Charm Level 11+",
 				"min_kingdom": 588,
 				"max_kingdom": 674,
+				"power_cap_normal": 150000000,
+				"power_cap_leading": 97500000,
 				"leading_kingdoms": [588, 591, 613, 623, 626, 638, 649, 667]
 			},
 			{
@@ -139,6 +163,8 @@
 				"progress": "Truegold 5",
 				"min_kingdom": 675,
 				"max_kingdom": 846,
+				"power_cap_normal": 130000000,
+				"power_cap_leading": 84500000,
 				"leading_kingdoms": [683, 686, 695, 704, 709, 710, 720, 746]
 			}
 		]
@@ -152,6 +178,8 @@
 				"progress": "War Academy",
 				"min_kingdom": 1,
 				"max_kingdom": 115,
+				"power_cap_normal": 200000000,
+				"power_cap_leading": 130000000,
 				"leading_kingdoms": [3, 6, 12, 24, 36, 45, 61, 90]
 			},
 			{
@@ -159,6 +187,8 @@
 				"progress": "Gen 4 Heroes & Pets",
 				"min_kingdom": 116,
 				"max_kingdom": 235,
+				"power_cap_normal": 170000000,
+				"power_cap_leading": 110500000,
 				"leading_kingdoms": [116, 130, 135, 138, 150, 158, 163, 165]
 			},
 			{
@@ -166,6 +196,8 @@
 				"progress": "Governor Charm Level 11+",
 				"min_kingdom": 236,
 				"max_kingdom": 309,
+				"power_cap_normal": 150000000,
+				"power_cap_leading": 97500000,
 				"leading_kingdoms": [236, 240, 255, 267, 268, 272, 288, 301]
 			},
 			{
@@ -173,6 +205,8 @@
 				"progress": "Truegold 5",
 				"min_kingdom": 310,
 				"max_kingdom": 505,
+				"power_cap_normal": 130000000,
+				"power_cap_leading": 84500000,
 				"leading_kingdoms": [333, 350, 354, 373, 390, 401, 406, 414]
 			}
 		]
@@ -185,18 +219,24 @@
 				"number": 1,
 				"min_kingdom": 1,
 				"max_kingdom": 25,
+				"power_cap_normal": 170000000,
+				"power_cap_leading": 110500000,
 				"leading_kingdoms": [3, 4, 13]
 			},
 			{
 				"number": 2,
 				"min_kingdom": 26,
 				"max_kingdom": 67,
+				"power_cap_normal": 150000000,
+				"power_cap_leading": 97500000,
 				"leading_kingdoms": [44, 45, 57, 59, 66]
 			},
 			{
 				"number": 3,
 				"min_kingdom": 68,
 				"max_kingdom": 175,
+				"power_cap_normal": 130000000,
+				"power_cap_leading": 84500000,
 				"leading_kingdoms": [80, 86, 90, 92, 93, 94, 95, 107, 114]
 			}
 		]
