@@ -38,13 +38,19 @@
                             <h1 class="text-4xl font-black italic tracking-tighter uppercase">Season {{ activeSeasonId }}</h1>
                         </div>
                         
-                        <div class="flex flex-wrap gap-4">
+                        <div class="flex flex-wrap gap-4 items-end">
+                            <div class="flex flex-col">
+                                <label class="text-[10px] uppercase font-black text-gray-500 mb-1 tracking-widest">Quick Search</label>
+                                <input v-model="searchQuery" type="number" placeholder="Kingdom #" class="bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm outline-none focus:border-blue-500 transition w-32">
+                            </div>
+
                             <div class="flex flex-col">
                                 <label class="text-[10px] uppercase font-black text-gray-500 mb-1 tracking-widest">Season</label>
                                 <select v-model="activeSeasonId" class="bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm outline-none focus:border-blue-500 transition cursor-pointer">
                                     <option v-for="(s, id) in data.seasons" :key="id" :value="id">Season {{ id }}</option>
                                 </select>
                             </div>
+
                             <div class="flex flex-col">
                                 <label class="text-[10px] uppercase font-black text-gray-500 mb-1 tracking-widest">Display</label>
                                 <div class="bg-gray-800 border border-gray-700 rounded-lg flex overflow-hidden text-sm">
@@ -88,6 +94,9 @@
                                         </div>
                                     </td>
                                 </tr>
+                                <tr v-if="sortedRankings.length === 0">
+                                    <td colspan="4" class="p-10 text-center text-gray-500 font-bold uppercase tracking-widest text-xs">No kingdoms found</td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -112,7 +121,7 @@
                                     <div class="flex items-baseline gap-3 mb-4">
                                         <div class="text-4xl font-black text-white">{{ currentSeasonRankings[type + '_elo'].score }}</div>
                                         <div class="text-xs font-black text-gray-500 uppercase tracking-tighter">
-                                            {{ currentSeasonRankings[type + '_elo'].percentile }}% <span class="text-[10px] opacity-60"></span>
+                                            {{ currentSeasonRankings[type + '_elo'].percentile }}%
                                         </div>
                                     </div>
                                     
@@ -294,8 +303,10 @@
                 const sortKey = ref('overall_elo');
                 const sortDir = ref(-1);
                 const predictor = reactive({ idA: '', idB: '' });
+                const searchQuery = ref('');
 
                 const calculateProb = (ra, rb) => (1 / (1 + Math.pow(10, (rb - ra) / 400)) * 100).toFixed(1);
+                
                 const calculateClassification = (stats) => {
                     if (!stats) return 'N/A';
                     const d = stats.castle_elo.score - stats.prep_elo.score;
@@ -339,7 +350,7 @@
                 window.addEventListener('hashchange', handleRouting);
 
                 return {
-                    loading, data, currentView, routeParams, activeSeasonId, displayMode, predictor,
+                    loading, data, currentView, routeParams, activeSeasonId, displayMode, predictor, searchQuery,
                     currentKingdom: computed(() => data.value?.kingdoms[routeParams.id]),
                     reversedHistory: computed(() => data.value?.kingdoms[routeParams.id] ? [...data.value.kingdoms[routeParams.id].history].reverse() : []),
                     currentMatch: computed(() => data.value?.matches[routeParams.id]),
@@ -401,14 +412,32 @@
                         return calculateClassification(data.value?.seasons[prev]?.rankings[kid]);
                     },
                     sortedRankings: computed(() => {
-                        if (!data.value) return [];
+                        if (!data.value || !activeSeasonId.value) return [];
                         const r = data.value.seasons[activeSeasonId.value].rankings;
-                        return Object.entries(r).map(([id, stats]) => ({ id, ...stats }))
-                            .sort((a, b) => {
-                                let vA = sortKey.value === 'id' ? parseInt(a.id) : a[sortKey.value].score;
-                                let vB = sortKey.value === 'id' ? parseInt(b.id) : b[sortKey.value].score;
-                                return (vA < vB ? -1 : 1) * sortDir.value;
-                            });
+                        
+                        // Apply filter and convert to array
+                        let list = Object.entries(r).map(([id, stats]) => ({ id, ...stats }));
+                        if (searchQuery.value) {
+                            list = list.filter(k => k.id.toString().includes(searchQuery.value));
+                        }
+
+                        // REACTIVE RE-SORTING LOGIC
+                        return list.sort((a, b) => {
+                            let vA, vB;
+                            if (sortKey.value === 'id') {
+                                vA = parseInt(a.id);
+                                vB = parseInt(b.id);
+                            } else {
+                                // Dynamic lookup based on displayMode ensures list re-sorts when mode toggles
+                                vA = a[sortKey.value][displayMode.value];
+                                vB = b[sortKey.value][displayMode.value];
+                            }
+                            
+                            let dir = sortDir.value;
+                            if (displayMode.value === 'rank' && sortKey.value !== 'id') dir *= -1;
+
+                            return (vA < vB ? -1 : 1) * dir;
+                        });
                     }),
                     setSort: (key) => { if (sortKey.value === key) sortDir.value *= -1; else { sortKey.value = key; sortDir.value = -1; }},
                     getSortIcon: (key) => sortKey.value !== key ? '<span class="opacity-20 text-[8px]">↕</span>' : (sortDir.value === -1 ? '↓' : '↑'),
