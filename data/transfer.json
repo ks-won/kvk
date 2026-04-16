@@ -1,0 +1,204 @@
+[
+	{
+		"number": 5,
+		"date": "2026-04-11",
+		"groups": [
+			{
+				"number": 1,
+				"min_kingdom": 1,
+				"max_kingdom": 175
+			},
+			{
+				"number": 2,
+				"min_kingdom": 176,
+				"max_kingdom": 417
+			},
+			{
+				"number": 3,
+				"min_kingdom": 418,
+				"max_kingdom": 674
+			},
+			{
+				"number": 4,
+				"min_kingdom": 675,
+				"max_kingdom": 1007
+			},
+			{
+				"number": 5,
+				"min_kingdom": 1008,
+				"max_kingdom": 1159
+			},
+			{
+				"number": 6,
+				"min_kingdom": 1160,
+				"max_kingdom": 1221
+			},
+			{
+				"number": 7,
+				"min_kingdom": 1222,
+				"max_kingdom": 1331
+			}
+		]
+	},
+	{
+		"number": 4,
+		"date": "2026-02-28",
+		"groups": [
+			{
+				"number": 1,
+				"progress": "Gen 6 Heroes & Pets",
+				"min_kingdom": 1,
+				"max_kingdom": 25,
+				"leading_kingdoms": [3, 12, 14]
+			},
+			{
+				"number": 2,
+				"progress": "Truegold 8",
+				"min_kingdom": 26,
+				"max_kingdom": 175,
+				"leading_kingdoms": [45, 57, 59, 86, 88, 90, 92, 119]
+			},
+			{
+				"number": 3,
+				"progress": "Gen 5 Heroes & Pets",
+				"min_kingdom": 176,
+				"max_kingdom": 417,
+				"leading_kingdoms": [199, 219, 231, 240, 255, 302, 321, 401]
+			},
+			{
+				"number": 4,
+				"progress": "War Academy",
+				"min_kingdom": 418,
+				"max_kingdom": 758,
+				"leading_kingdoms": [423, 460, 535, 623]
+			},
+			{
+				"number": 5,
+				"progress": "Gen 4 Heroes & Pets",
+				"min_kingdom": 759,
+				"max_kingdom": 927,
+				"leading_kingdoms": [759, 764, 772, 790, 795, 809, 810, 838]
+			},
+			{
+				"number": 6,
+				"progress": "Governor Charm Level 11+",
+				"min_kingdom": 928,
+				"max_kingdom": 1007,
+				"leading_kingdoms": [932, 946, 950, 959, 960, 1000, 1004]
+			},
+			{
+				"number": 7,
+				"progress":"Truegold 5",
+				"min_kingdom": 1008,
+				"max_kingdom": 1159,
+				"leading_kingdoms": [1016, 1019, 1034, 1035, 1040, 1041, 1079, 1081]
+			}
+		]
+	},
+	{
+		"number": 3,
+		"date": "2026-01-03",
+		"groups": [
+			{
+				"number": 1,
+				"progress": "Truegold 8",
+				"min_kingdom": 1,
+				"max_kingdom": 6,
+				"leading_kingdoms": [3]
+			},
+			{
+				"number": 2,
+				"progress": "Gen 5 Heroes & Pets",
+				"min_kingdom": 7,
+				"max_kingdom": 115,
+				"leading_kingdoms": [12, 45, 57, 62, 86, 90, 92, 109]
+			},
+			{
+				"number": 3,
+				"progress": "War Academy",
+				"min_kingdom": 116,
+				"max_kingdom": 417,
+				"leading_kingdoms": [116, 130, 138, 158, 165, 240, 255, 267, 308]
+			},
+			{
+				"number": 4,
+				"progress": "Gen 4 Heroes & Pets",
+				"min_kingdom": 418,
+				"max_kingdom": 587,
+				"leading_kingdoms": [423, 444, 446, 447, 460, 479, 505, 535]
+			},
+			{
+				"number": 5,
+				"progress": "Governor Charm Level 11+",
+				"min_kingdom": 588,
+				"max_kingdom": 674,
+				"leading_kingdoms": [588, 591, 613, 623, 626, 638, 649, 667]
+			},
+			{
+				"number": 6,
+				"progress": "Truegold 5",
+				"min_kingdom": 675,
+				"max_kingdom": 846,
+				"leading_kingdoms": [683, 686, 695, 704, 709, 710, 720, 746]
+			}
+		]
+	},
+	{
+		"number": 2,
+		"date": "2025-11-08",
+		"groups": [
+			{
+				"number": 1,
+				"progress": "War Academy",
+				"min_kingdom": 1,
+				"max_kingdom": 115,
+				"leading_kingdoms": [3, 6, 12, 24, 36, 45, 61, 90]
+			},
+			{
+				"number": 2,
+				"progress": "Gen 4 Heroes & Pets",
+				"min_kingdom": 116,
+				"max_kingdom": 235,
+				"leading_kingdoms": [116, 130, 135, 138, 150, 158, 163, 165]
+			},
+			{
+				"number": 3,
+				"progress": "Governor Charm Level 11+",
+				"min_kingdom": 236,
+				"max_kingdom": 309,
+				"leading_kingdoms": [236, 240, 255, 267, 268, 272, 288, 301]
+			},
+			{
+				"number": 4,
+				"progress": "Truegold 5",
+				"min_kingdom": 310,
+				"max_kingdom": 505,
+				"leading_kingdoms": [333, 350, 354, 373, 390, 401, 406, 414]
+			}
+		]
+	},
+	{
+		"number": 1,
+		"date": "2025-09-13",
+		"groups": [
+			{
+				"number": 1,
+				"min_kingdom": 1,
+				"max_kingdom": 25,
+				"leading_kingdoms": [3, 4, 13]
+			},
+			{
+				"number": 2,
+				"min_kingdom": 26,
+				"max_kingdom": 67,
+				"leading_kingdoms": [44, 45, 57, 59, 66]
+			},
+			{
+				"number": 3,
+				"min_kingdom": 68,
+				"max_kingdom": 175,
+				"leading_kingdoms": [80, 86, 90, 92, 93, 94, 95, 107, 114]
+			}
+		]
+	}
+]
