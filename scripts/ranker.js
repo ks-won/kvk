@@ -39,14 +39,21 @@ async function run() {
             matches.forEach(m => {
                 const { kingdom_a: a, kingdom_b: b, prep_winner: pW, castle_winner: cW, kvk_id } = m;
 
-                [a, b].forEach(id => {
-                    if (!ratings[id]) {
-                        const age = (new Date() - new Date(kingdoms[id])) / 86400000 || 0;
-                        const init = 1000 + (age * CONFIG.AGE_FACTOR);
-                        ratings[id] = { prepElo: init, castleElo: init, overallElo: init, confidence: 0.1, matchesPlayed: 0 };
-                    }
-                    if (!seasonLogs[id]) seasonLogs[id] = [];
-                });
+                const matchDate = new Date(m.season_date);
+
+                if (!ratings[a]) {
+                    const ageA = m.kingdom_a_age_days || 0;
+                    const initA = 1000 + (ageA * CONFIG.AGE_FACTOR);
+                    ratings[a] = { prepElo: initA, castleElo: initA, overallElo: initA, confidence: 0.1, matchesPlayed: 0 };
+                }
+                if (!seasonLogs[a]) seasonLogs[a] = [];
+
+                if (!ratings[b]) {
+                    const ageB = m.kingdom_b_age_days || 0;
+                    const initB = 1000 + (ageB * CONFIG.AGE_FACTOR);
+                    ratings[b] = { prepElo: initB, castleElo: initB, overallElo: initB, confidence: 0.1, matchesPlayed: 0 };
+                }
+                if (!seasonLogs[b]) seasonLogs[b] = [];
 
                 // Calculate Deltas
                 const isSweepA = (pW == a && cW == a);
@@ -75,7 +82,9 @@ async function run() {
                 ratings[a].prepElo = resP_A.nextElo; ratings[a].castleElo = resC_A.nextElo; ratings[a].overallElo = resO_A.nextElo;
                 ratings[b].prepElo = resP_B.nextElo; ratings[b].castleElo = resC_B.nextElo; ratings[b].overallElo = resO_B.nextElo;
                 
-                ratings[a].matchesPlayed++; ratings[b].matchesPlayed++;
+                ratings[a].matchesPlayed++;
+                ratings[b].matchesPlayed++;
+                
                 ratings[a].confidence = Math.min(1.0, ratings[a].confidence + CONFIG.CONFIDENCE_GAIN);
                 ratings[b].confidence = Math.min(1.0, ratings[b].confidence + CONFIG.CONFIDENCE_GAIN);
             });
