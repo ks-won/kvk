@@ -13,7 +13,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:55.973Z",
-    "updated_at": "2026-01-25T23:26:55.973Z"
+    "updated_at": "2026-01-25T23:26:55.973Z",
+    "kingdom_a_age_days": 201,
+    "kingdom_b_age_days": 195
   },
   {
     "kvk_id": 13,
@@ -29,7 +31,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:56.008Z",
-    "updated_at": "2026-01-25T23:26:56.008Z"
+    "updated_at": "2026-01-25T23:26:56.008Z",
+    "kingdom_a_age_days": 199,
+    "kingdom_b_age_days": 198
   },
   {
     "kvk_id": 26,
@@ -45,7 +49,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:56.060Z",
-    "updated_at": "2026-01-25T23:26:56.060Z"
+    "updated_at": "2026-01-25T23:26:56.060Z",
+    "kingdom_a_age_days": 197,
+    "kingdom_b_age_days": 196
   },
   {
     "kvk_id": 40,
@@ -61,7 +67,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:56.117Z",
-    "updated_at": "2026-01-25T23:26:56.117Z"
+    "updated_at": "2026-01-25T23:26:56.117Z",
+    "kingdom_a_age_days": 194,
+    "kingdom_b_age_days": 181
   },
   {
     "kvk_id": 48,
@@ -77,7 +85,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:56.148Z",
-    "updated_at": "2026-01-25T23:26:56.148Z"
+    "updated_at": "2026-01-25T23:26:56.148Z",
+    "kingdom_a_age_days": 193,
+    "kingdom_b_age_days": 189
   },
   {
     "kvk_id": 55,
@@ -93,7 +103,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:56.181Z",
-    "updated_at": "2026-01-25T23:26:56.181Z"
+    "updated_at": "2026-01-25T23:26:56.181Z",
+    "kingdom_a_age_days": 192,
+    "kingdom_b_age_days": 182
   },
   {
     "kvk_id": 63,
@@ -109,7 +121,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:56.215Z",
-    "updated_at": "2026-01-25T23:26:56.215Z"
+    "updated_at": "2026-01-25T23:26:56.215Z",
+    "kingdom_a_age_days": 191,
+    "kingdom_b_age_days": 177
   },
   {
     "kvk_id": 68,
@@ -125,7 +139,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:56.233Z",
-    "updated_at": "2026-01-25T23:26:56.233Z"
+    "updated_at": "2026-01-25T23:26:56.233Z",
+    "kingdom_a_age_days": 190,
+    "kingdom_b_age_days": 174
   },
   {
     "kvk_id": 77,
@@ -141,7 +157,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:56.270Z",
-    "updated_at": "2026-01-25T23:26:56.270Z"
+    "updated_at": "2026-01-25T23:26:56.270Z",
+    "kingdom_a_age_days": 188,
+    "kingdom_b_age_days": 187
   },
   {
     "kvk_id": 85,
@@ -157,7 +175,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:56.296Z",
-    "updated_at": "2026-01-25T23:26:56.296Z"
+    "updated_at": "2026-01-25T23:26:56.296Z",
+    "kingdom_a_age_days": 186,
+    "kingdom_b_age_days": 174
   },
   {
     "kvk_id": 90,
@@ -173,7 +193,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:56.311Z",
-    "updated_at": "2026-01-25T23:26:56.311Z"
+    "updated_at": "2026-01-25T23:26:56.311Z",
+    "kingdom_a_age_days": 185,
+    "kingdom_b_age_days": 172
   },
   {
     "kvk_id": 96,
@@ -189,7 +211,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:56.331Z",
-    "updated_at": "2026-01-25T23:26:56.331Z"
+    "updated_at": "2026-01-25T23:26:56.331Z",
+    "kingdom_a_age_days": 184,
+    "kingdom_b_age_days": 169
   },
   {
     "kvk_id": 101,
@@ -205,7 +229,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:56.343Z",
-    "updated_at": "2026-01-25T23:26:56.343Z"
+    "updated_at": "2026-01-25T23:26:56.343Z",
+    "kingdom_a_age_days": 183,
+    "kingdom_b_age_days": 174
   },
   {
     "kvk_id": 112,
@@ -221,7 +247,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:56.376Z",
-    "updated_at": "2026-01-25T23:26:56.376Z"
+    "updated_at": "2026-01-25T23:26:56.376Z",
+    "kingdom_a_age_days": 182,
+    "kingdom_b_age_days": 168
   },
   {
     "kvk_id": 117,
@@ -237,7 +265,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:56.393Z",
-    "updated_at": "2026-01-25T23:26:56.393Z"
+    "updated_at": "2026-01-25T23:26:56.393Z",
+    "kingdom_a_age_days": 182,
+    "kingdom_b_age_days": 177
   },
   {
     "kvk_id": 123,
@@ -253,7 +283,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:56.408Z",
-    "updated_at": "2026-01-25T23:26:56.408Z"
+    "updated_at": "2026-01-25T23:26:56.408Z",
+    "kingdom_a_age_days": 181,
+    "kingdom_b_age_days": 170
   },
   {
     "kvk_id": 128,
@@ -269,7 +301,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:56.420Z",
-    "updated_at": "2026-01-25T23:26:56.420Z"
+    "updated_at": "2026-01-25T23:26:56.420Z",
+    "kingdom_a_age_days": 181,
+    "kingdom_b_age_days": 171
   },
   {
     "kvk_id": 135,
@@ -285,7 +319,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:56.437Z",
-    "updated_at": "2026-01-25T23:26:56.437Z"
+    "updated_at": "2026-01-25T23:26:56.437Z",
+    "kingdom_a_age_days": 181,
+    "kingdom_b_age_days": 169
   },
   {
     "kvk_id": 141,
@@ -301,7 +337,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:56.452Z",
-    "updated_at": "2026-01-25T23:26:56.452Z"
+    "updated_at": "2026-01-25T23:26:56.452Z",
+    "kingdom_a_age_days": 180,
+    "kingdom_b_age_days": 176
   },
   {
     "kvk_id": 144,
@@ -317,7 +355,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:56.460Z",
-    "updated_at": "2026-01-25T23:26:56.460Z"
+    "updated_at": "2026-01-25T23:26:56.460Z",
+    "kingdom_a_age_days": 180,
+    "kingdom_b_age_days": 168
   },
   {
     "kvk_id": 147,
@@ -333,7 +373,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:56.468Z",
-    "updated_at": "2026-01-25T23:26:56.468Z"
+    "updated_at": "2026-01-25T23:26:56.468Z",
+    "kingdom_a_age_days": 179,
+    "kingdom_b_age_days": 175
   },
   {
     "kvk_id": 154,
@@ -349,7 +391,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:56.485Z",
-    "updated_at": "2026-01-25T23:26:56.485Z"
+    "updated_at": "2026-01-25T23:26:56.485Z",
+    "kingdom_a_age_days": 179,
+    "kingdom_b_age_days": 172
   },
   {
     "kvk_id": 160,
@@ -365,7 +409,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:56.500Z",
-    "updated_at": "2026-01-25T23:26:56.500Z"
+    "updated_at": "2026-01-25T23:26:56.500Z",
+    "kingdom_a_age_days": 179,
+    "kingdom_b_age_days": 173
   },
   {
     "kvk_id": 168,
@@ -381,7 +427,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:56.520Z",
-    "updated_at": "2026-01-25T23:26:56.520Z"
+    "updated_at": "2026-01-25T23:26:56.520Z",
+    "kingdom_a_age_days": 178,
+    "kingdom_b_age_days": 175
   },
   {
     "kvk_id": 173,
@@ -397,7 +445,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:56.533Z",
-    "updated_at": "2026-01-25T23:26:56.533Z"
+    "updated_at": "2026-01-25T23:26:56.533Z",
+    "kingdom_a_age_days": 177,
+    "kingdom_b_age_days": 171
   },
   {
     "kvk_id": 180,
@@ -413,7 +463,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:56.553Z",
-    "updated_at": "2026-01-25T23:26:56.553Z"
+    "updated_at": "2026-01-25T23:26:56.553Z",
+    "kingdom_a_age_days": 176,
+    "kingdom_b_age_days": 168
   },
   {
     "kvk_id": 199,
@@ -429,7 +481,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:56.603Z",
-    "updated_at": "2026-01-25T23:26:56.603Z"
+    "updated_at": "2026-01-25T23:26:56.603Z",
+    "kingdom_a_age_days": 175,
+    "kingdom_b_age_days": 172
   },
   {
     "kvk_id": 207,
@@ -445,7 +499,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:56.624Z",
-    "updated_at": "2026-01-25T23:26:56.624Z"
+    "updated_at": "2026-01-25T23:26:56.624Z",
+    "kingdom_a_age_days": 175,
+    "kingdom_b_age_days": 171
   },
   {
     "kvk_id": 212,
@@ -461,7 +517,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:56.637Z",
-    "updated_at": "2026-01-25T23:26:56.637Z"
+    "updated_at": "2026-01-25T23:26:56.637Z",
+    "kingdom_a_age_days": 174,
+    "kingdom_b_age_days": 167
   },
   {
     "kvk_id": 214,
@@ -477,7 +535,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:56.642Z",
-    "updated_at": "2026-01-25T23:26:56.642Z"
+    "updated_at": "2026-01-25T23:26:56.642Z",
+    "kingdom_a_age_days": 174,
+    "kingdom_b_age_days": 169
   },
   {
     "kvk_id": 228,
@@ -493,7 +553,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:56.694Z",
-    "updated_at": "2026-01-25T23:26:56.694Z"
+    "updated_at": "2026-01-25T23:26:56.694Z",
+    "kingdom_a_age_days": 173,
+    "kingdom_b_age_days": 169
   },
   {
     "kvk_id": 234,
@@ -509,7 +571,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:56.714Z",
-    "updated_at": "2026-01-25T23:26:56.714Z"
+    "updated_at": "2026-01-25T23:26:56.714Z",
+    "kingdom_a_age_days": 173,
+    "kingdom_b_age_days": 167
   },
   {
     "kvk_id": 295,
@@ -525,7 +589,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:56.876Z",
-    "updated_at": "2026-01-25T23:26:56.876Z"
+    "updated_at": "2026-01-25T23:26:56.876Z",
+    "kingdom_a_age_days": 167,
+    "kingdom_b_age_days": 167
   },
   {
     "kvk_id": 302,
@@ -541,7 +607,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:56.896Z",
-    "updated_at": "2026-01-25T23:26:56.896Z"
+    "updated_at": "2026-01-25T23:26:56.896Z",
+    "kingdom_a_age_days": 166,
+    "kingdom_b_age_days": 153
   },
   {
     "kvk_id": 308,
@@ -557,7 +625,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:56.912Z",
-    "updated_at": "2026-01-25T23:26:56.912Z"
+    "updated_at": "2026-01-25T23:26:56.912Z",
+    "kingdom_a_age_days": 166,
+    "kingdom_b_age_days": 154
   },
   {
     "kvk_id": 314,
@@ -573,7 +643,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:56.928Z",
-    "updated_at": "2026-01-25T23:26:56.928Z"
+    "updated_at": "2026-01-25T23:26:56.928Z",
+    "kingdom_a_age_days": 166,
+    "kingdom_b_age_days": 155
   },
   {
     "kvk_id": 319,
@@ -589,7 +661,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:56.941Z",
-    "updated_at": "2026-01-25T23:26:56.941Z"
+    "updated_at": "2026-01-25T23:26:56.941Z",
+    "kingdom_a_age_days": 165,
+    "kingdom_b_age_days": 163
   },
   {
     "kvk_id": 326,
@@ -605,7 +679,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:56.969Z",
-    "updated_at": "2026-01-25T23:26:56.969Z"
+    "updated_at": "2026-01-25T23:26:56.969Z",
+    "kingdom_a_age_days": 165,
+    "kingdom_b_age_days": 156
   },
   {
     "kvk_id": 332,
@@ -621,7 +697,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:56.987Z",
-    "updated_at": "2026-01-25T23:26:56.987Z"
+    "updated_at": "2026-01-25T23:26:56.987Z",
+    "kingdom_a_age_days": 165,
+    "kingdom_b_age_days": 157
   },
   {
     "kvk_id": 339,
@@ -637,7 +715,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.006Z",
-    "updated_at": "2026-01-25T23:26:57.006Z"
+    "updated_at": "2026-01-25T23:26:57.006Z",
+    "kingdom_a_age_days": 164,
+    "kingdom_b_age_days": 157
   },
   {
     "kvk_id": 344,
@@ -653,7 +733,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.021Z",
-    "updated_at": "2026-01-25T23:26:57.021Z"
+    "updated_at": "2026-01-25T23:26:57.021Z",
+    "kingdom_a_age_days": 164,
+    "kingdom_b_age_days": 159
   },
   {
     "kvk_id": 357,
@@ -669,7 +751,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.070Z",
-    "updated_at": "2026-01-25T23:26:57.070Z"
+    "updated_at": "2026-01-25T23:26:57.070Z",
+    "kingdom_a_age_days": 163,
+    "kingdom_b_age_days": 158
   },
   {
     "kvk_id": 361,
@@ -685,7 +769,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.086Z",
-    "updated_at": "2026-01-25T23:26:57.086Z"
+    "updated_at": "2026-01-25T23:26:57.086Z",
+    "kingdom_a_age_days": 163,
+    "kingdom_b_age_days": 161
   },
   {
     "kvk_id": 367,
@@ -701,7 +787,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.108Z",
-    "updated_at": "2026-01-25T23:26:57.108Z"
+    "updated_at": "2026-01-25T23:26:57.108Z",
+    "kingdom_a_age_days": 162,
+    "kingdom_b_age_days": 160
   },
   {
     "kvk_id": 377,
@@ -717,7 +805,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.142Z",
-    "updated_at": "2026-01-25T23:26:57.142Z"
+    "updated_at": "2026-01-25T23:26:57.142Z",
+    "kingdom_a_age_days": 162,
+    "kingdom_b_age_days": 155
   },
   {
     "kvk_id": 383,
@@ -733,7 +823,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.161Z",
-    "updated_at": "2026-01-25T23:26:57.161Z"
+    "updated_at": "2026-01-25T23:26:57.161Z",
+    "kingdom_a_age_days": 161,
+    "kingdom_b_age_days": 158
   },
   {
     "kvk_id": 388,
@@ -749,7 +841,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.175Z",
-    "updated_at": "2026-01-25T23:26:57.175Z"
+    "updated_at": "2026-01-25T23:26:57.175Z",
+    "kingdom_a_age_days": 161,
+    "kingdom_b_age_days": 158
   },
   {
     "kvk_id": 393,
@@ -765,7 +859,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.188Z",
-    "updated_at": "2026-01-25T23:26:57.188Z"
+    "updated_at": "2026-01-25T23:26:57.188Z",
+    "kingdom_a_age_days": 161,
+    "kingdom_b_age_days": 155
   },
   {
     "kvk_id": 397,
@@ -781,7 +877,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.198Z",
-    "updated_at": "2026-01-25T23:26:57.198Z"
+    "updated_at": "2026-01-25T23:26:57.198Z",
+    "kingdom_a_age_days": 161,
+    "kingdom_b_age_days": 153
   },
   {
     "kvk_id": 402,
@@ -797,7 +895,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.211Z",
-    "updated_at": "2026-01-25T23:26:57.211Z"
+    "updated_at": "2026-01-25T23:26:57.211Z",
+    "kingdom_a_age_days": 160,
+    "kingdom_b_age_days": 160
   },
   {
     "kvk_id": 412,
@@ -813,7 +913,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.243Z",
-    "updated_at": "2026-01-25T23:26:57.243Z"
+    "updated_at": "2026-01-25T23:26:57.243Z",
+    "kingdom_a_age_days": 160,
+    "kingdom_b_age_days": 153
   },
   {
     "kvk_id": 415,
@@ -829,7 +931,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.251Z",
-    "updated_at": "2026-01-25T23:26:57.251Z"
+    "updated_at": "2026-01-25T23:26:57.251Z",
+    "kingdom_a_age_days": 159,
+    "kingdom_b_age_days": 153
   },
   {
     "kvk_id": 420,
@@ -845,7 +949,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.264Z",
-    "updated_at": "2026-01-25T23:26:57.264Z"
+    "updated_at": "2026-01-25T23:26:57.264Z",
+    "kingdom_a_age_days": 159,
+    "kingdom_b_age_days": 153
   },
   {
     "kvk_id": 424,
@@ -861,7 +967,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.274Z",
-    "updated_at": "2026-01-25T23:26:57.274Z"
+    "updated_at": "2026-01-25T23:26:57.274Z",
+    "kingdom_a_age_days": 159,
+    "kingdom_b_age_days": 157
   },
   {
     "kvk_id": 430,
@@ -877,7 +985,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.290Z",
-    "updated_at": "2026-01-25T23:26:57.290Z"
+    "updated_at": "2026-01-25T23:26:57.290Z",
+    "kingdom_a_age_days": 158,
+    "kingdom_b_age_days": 154
   },
   {
     "kvk_id": 452,
@@ -893,7 +1003,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.353Z",
-    "updated_at": "2026-01-25T23:26:57.353Z"
+    "updated_at": "2026-01-25T23:26:57.353Z",
+    "kingdom_a_age_days": 156,
+    "kingdom_b_age_days": 153
   },
   {
     "kvk_id": 454,
@@ -909,7 +1021,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.358Z",
-    "updated_at": "2026-01-25T23:26:57.358Z"
+    "updated_at": "2026-01-25T23:26:57.358Z",
+    "kingdom_a_age_days": 155,
+    "kingdom_b_age_days": 154
   },
   {
     "kvk_id": 485,
@@ -925,7 +1039,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.435Z",
-    "updated_at": "2026-01-25T23:26:57.435Z"
+    "updated_at": "2026-01-25T23:26:57.435Z",
+    "kingdom_a_age_days": 152,
+    "kingdom_b_age_days": 147
   },
   {
     "kvk_id": 490,
@@ -941,7 +1057,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.447Z",
-    "updated_at": "2026-01-25T23:26:57.447Z"
+    "updated_at": "2026-01-25T23:26:57.447Z",
+    "kingdom_a_age_days": 152,
+    "kingdom_b_age_days": 143
   },
   {
     "kvk_id": 495,
@@ -957,7 +1075,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.460Z",
-    "updated_at": "2026-01-25T23:26:57.460Z"
+    "updated_at": "2026-01-25T23:26:57.460Z",
+    "kingdom_a_age_days": 152,
+    "kingdom_b_age_days": 152
   },
   {
     "kvk_id": 504,
@@ -973,7 +1093,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.482Z",
-    "updated_at": "2026-01-25T23:26:57.482Z"
+    "updated_at": "2026-01-25T23:26:57.482Z",
+    "kingdom_a_age_days": 151,
+    "kingdom_b_age_days": 146
   },
   {
     "kvk_id": 509,
@@ -989,7 +1111,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.494Z",
-    "updated_at": "2026-01-25T23:26:57.494Z"
+    "updated_at": "2026-01-25T23:26:57.494Z",
+    "kingdom_a_age_days": 151,
+    "kingdom_b_age_days": 147
   },
   {
     "kvk_id": 514,
@@ -1005,7 +1129,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.509Z",
-    "updated_at": "2026-01-25T23:26:57.509Z"
+    "updated_at": "2026-01-25T23:26:57.509Z",
+    "kingdom_a_age_days": 151,
+    "kingdom_b_age_days": 150
   },
   {
     "kvk_id": 519,
@@ -1021,7 +1147,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.523Z",
-    "updated_at": "2026-01-25T23:26:57.523Z"
+    "updated_at": "2026-01-25T23:26:57.523Z",
+    "kingdom_a_age_days": 150,
+    "kingdom_b_age_days": 143
   },
   {
     "kvk_id": 524,
@@ -1037,7 +1165,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.535Z",
-    "updated_at": "2026-01-25T23:26:57.535Z"
+    "updated_at": "2026-01-25T23:26:57.535Z",
+    "kingdom_a_age_days": 150,
+    "kingdom_b_age_days": 145
   },
   {
     "kvk_id": 528,
@@ -1053,7 +1183,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.545Z",
-    "updated_at": "2026-01-25T23:26:57.545Z"
+    "updated_at": "2026-01-25T23:26:57.545Z",
+    "kingdom_a_age_days": 150,
+    "kingdom_b_age_days": 145
   },
   {
     "kvk_id": 537,
@@ -1069,7 +1201,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.569Z",
-    "updated_at": "2026-01-25T23:26:57.569Z"
+    "updated_at": "2026-01-25T23:26:57.569Z",
+    "kingdom_a_age_days": 149,
+    "kingdom_b_age_days": 144
   },
   {
     "kvk_id": 543,
@@ -1085,7 +1219,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.583Z",
-    "updated_at": "2026-01-25T23:26:57.583Z"
+    "updated_at": "2026-01-25T23:26:57.583Z",
+    "kingdom_a_age_days": 149,
+    "kingdom_b_age_days": 144
   },
   {
     "kvk_id": 547,
@@ -1101,7 +1237,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.593Z",
-    "updated_at": "2026-01-25T23:26:57.593Z"
+    "updated_at": "2026-01-25T23:26:57.593Z",
+    "kingdom_a_age_days": 149,
+    "kingdom_b_age_days": 145
   },
   {
     "kvk_id": 552,
@@ -1117,7 +1255,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.606Z",
-    "updated_at": "2026-01-25T23:26:57.606Z"
+    "updated_at": "2026-01-25T23:26:57.606Z",
+    "kingdom_a_age_days": 148,
+    "kingdom_b_age_days": 140
   },
   {
     "kvk_id": 556,
@@ -1133,7 +1273,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.615Z",
-    "updated_at": "2026-01-25T23:26:57.615Z"
+    "updated_at": "2026-01-25T23:26:57.615Z",
+    "kingdom_a_age_days": 148,
+    "kingdom_b_age_days": 144
   },
   {
     "kvk_id": 560,
@@ -1149,7 +1291,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.625Z",
-    "updated_at": "2026-01-25T23:26:57.625Z"
+    "updated_at": "2026-01-25T23:26:57.625Z",
+    "kingdom_a_age_days": 148,
+    "kingdom_b_age_days": 141
   },
   {
     "kvk_id": 563,
@@ -1165,7 +1309,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.632Z",
-    "updated_at": "2026-01-25T23:26:57.632Z"
+    "updated_at": "2026-01-25T23:26:57.632Z",
+    "kingdom_a_age_days": 148,
+    "kingdom_b_age_days": 145
   },
   {
     "kvk_id": 568,
@@ -1181,7 +1327,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.645Z",
-    "updated_at": "2026-01-25T23:26:57.645Z"
+    "updated_at": "2026-01-25T23:26:57.645Z",
+    "kingdom_a_age_days": 147,
+    "kingdom_b_age_days": 146
   },
   {
     "kvk_id": 571,
@@ -1197,7 +1345,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.653Z",
-    "updated_at": "2026-01-25T23:26:57.653Z"
+    "updated_at": "2026-01-25T23:26:57.653Z",
+    "kingdom_a_age_days": 147,
+    "kingdom_b_age_days": 140
   },
   {
     "kvk_id": 576,
@@ -1213,7 +1363,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.666Z",
-    "updated_at": "2026-01-25T23:26:57.666Z"
+    "updated_at": "2026-01-25T23:26:57.666Z",
+    "kingdom_a_age_days": 147,
+    "kingdom_b_age_days": 140
   },
   {
     "kvk_id": 584,
@@ -1229,7 +1381,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.685Z",
-    "updated_at": "2026-01-25T23:26:57.685Z"
+    "updated_at": "2026-01-25T23:26:57.685Z",
+    "kingdom_a_age_days": 146,
+    "kingdom_b_age_days": 144
   },
   {
     "kvk_id": 593,
@@ -1245,7 +1399,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.707Z",
-    "updated_at": "2026-01-25T23:26:57.707Z"
+    "updated_at": "2026-01-25T23:26:57.707Z",
+    "kingdom_a_age_days": 146,
+    "kingdom_b_age_days": 141
   },
   {
     "kvk_id": 595,
@@ -1261,7 +1417,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.711Z",
-    "updated_at": "2026-01-25T23:26:57.711Z"
+    "updated_at": "2026-01-25T23:26:57.711Z",
+    "kingdom_a_age_days": 146,
+    "kingdom_b_age_days": 138
   },
   {
     "kvk_id": 598,
@@ -1277,7 +1435,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.719Z",
-    "updated_at": "2026-01-25T23:26:57.719Z"
+    "updated_at": "2026-01-25T23:26:57.719Z",
+    "kingdom_a_age_days": 146,
+    "kingdom_b_age_days": 145
   },
   {
     "kvk_id": 620,
@@ -1293,7 +1453,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.776Z",
-    "updated_at": "2026-01-25T23:26:57.776Z"
+    "updated_at": "2026-01-25T23:26:57.776Z",
+    "kingdom_a_age_days": 144,
+    "kingdom_b_age_days": 135
   },
   {
     "kvk_id": 631,
@@ -1309,7 +1471,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.809Z",
-    "updated_at": "2026-01-25T23:26:57.809Z"
+    "updated_at": "2026-01-25T23:26:57.809Z",
+    "kingdom_a_age_days": 143,
+    "kingdom_b_age_days": 143
   },
   {
     "kvk_id": 643,
@@ -1325,7 +1489,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.842Z",
-    "updated_at": "2026-01-25T23:26:57.842Z"
+    "updated_at": "2026-01-25T23:26:57.842Z",
+    "kingdom_a_age_days": 142,
+    "kingdom_b_age_days": 139
   },
   {
     "kvk_id": 644,
@@ -1341,7 +1507,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.844Z",
-    "updated_at": "2026-01-25T23:26:57.844Z"
+    "updated_at": "2026-01-25T23:26:57.844Z",
+    "kingdom_a_age_days": 142,
+    "kingdom_b_age_days": 134
   },
   {
     "kvk_id": 645,
@@ -1357,7 +1525,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.847Z",
-    "updated_at": "2026-01-25T23:26:57.847Z"
+    "updated_at": "2026-01-25T23:26:57.847Z",
+    "kingdom_a_age_days": 142,
+    "kingdom_b_age_days": 136
   },
   {
     "kvk_id": 649,
@@ -1373,7 +1543,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.858Z",
-    "updated_at": "2026-01-25T23:26:57.858Z"
+    "updated_at": "2026-01-25T23:26:57.858Z",
+    "kingdom_a_age_days": 142,
+    "kingdom_b_age_days": 138
   },
   {
     "kvk_id": 657,
@@ -1389,7 +1561,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.879Z",
-    "updated_at": "2026-01-25T23:26:57.879Z"
+    "updated_at": "2026-01-25T23:26:57.879Z",
+    "kingdom_a_age_days": 141,
+    "kingdom_b_age_days": 133
   },
   {
     "kvk_id": 658,
@@ -1405,7 +1579,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.881Z",
-    "updated_at": "2026-01-25T23:26:57.881Z"
+    "updated_at": "2026-01-25T23:26:57.881Z",
+    "kingdom_a_age_days": 140,
+    "kingdom_b_age_days": 139
   },
   {
     "kvk_id": 663,
@@ -1421,7 +1597,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.894Z",
-    "updated_at": "2026-01-25T23:26:57.894Z"
+    "updated_at": "2026-01-25T23:26:57.894Z",
+    "kingdom_a_age_days": 139,
+    "kingdom_b_age_days": 134
   },
   {
     "kvk_id": 664,
@@ -1437,7 +1615,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.897Z",
-    "updated_at": "2026-01-25T23:26:57.897Z"
+    "updated_at": "2026-01-25T23:26:57.897Z",
+    "kingdom_a_age_days": 139,
+    "kingdom_b_age_days": 132
   },
   {
     "kvk_id": 667,
@@ -1453,7 +1633,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.905Z",
-    "updated_at": "2026-01-25T23:26:57.905Z"
+    "updated_at": "2026-01-25T23:26:57.905Z",
+    "kingdom_a_age_days": 139,
+    "kingdom_b_age_days": 133
   },
   {
     "kvk_id": 670,
@@ -1469,7 +1651,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.912Z",
-    "updated_at": "2026-01-25T23:26:57.912Z"
+    "updated_at": "2026-01-25T23:26:57.912Z",
+    "kingdom_a_age_days": 139,
+    "kingdom_b_age_days": 132
   },
   {
     "kvk_id": 677,
@@ -1485,7 +1669,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.931Z",
-    "updated_at": "2026-01-25T23:26:57.931Z"
+    "updated_at": "2026-01-25T23:26:57.931Z",
+    "kingdom_a_age_days": 138,
+    "kingdom_b_age_days": 132
   },
   {
     "kvk_id": 683,
@@ -1501,7 +1687,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.946Z",
-    "updated_at": "2026-01-25T23:26:57.946Z"
+    "updated_at": "2026-01-25T23:26:57.946Z",
+    "kingdom_a_age_days": 138,
+    "kingdom_b_age_days": 137
   },
   {
     "kvk_id": 692,
@@ -1517,7 +1705,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.984Z",
-    "updated_at": "2026-01-25T23:26:57.984Z"
+    "updated_at": "2026-01-25T23:26:57.984Z",
+    "kingdom_a_age_days": 137,
+    "kingdom_b_age_days": 137
   },
   {
     "kvk_id": 697,
@@ -1533,7 +1723,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:57.998Z",
-    "updated_at": "2026-01-25T23:26:57.998Z"
+    "updated_at": "2026-01-25T23:26:57.998Z",
+    "kingdom_a_age_days": 137,
+    "kingdom_b_age_days": 132
   },
   {
     "kvk_id": 714,
@@ -1549,7 +1741,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.044Z",
-    "updated_at": "2026-01-25T23:26:58.044Z"
+    "updated_at": "2026-01-25T23:26:58.044Z",
+    "kingdom_a_age_days": 135,
+    "kingdom_b_age_days": 134
   },
   {
     "kvk_id": 719,
@@ -1565,7 +1759,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.057Z",
-    "updated_at": "2026-01-25T23:26:58.057Z"
+    "updated_at": "2026-01-25T23:26:58.057Z",
+    "kingdom_a_age_days": 135,
+    "kingdom_b_age_days": 134
   },
   {
     "kvk_id": 724,
@@ -1581,7 +1777,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.070Z",
-    "updated_at": "2026-01-25T23:26:58.070Z"
+    "updated_at": "2026-01-25T23:26:58.070Z",
+    "kingdom_a_age_days": 136,
+    "kingdom_b_age_days": 132
   },
   {
     "kvk_id": 732,
@@ -1597,7 +1795,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.093Z",
-    "updated_at": "2026-01-25T23:26:58.093Z"
+    "updated_at": "2026-01-25T23:26:58.093Z",
+    "kingdom_a_age_days": 135,
+    "kingdom_b_age_days": 135
   },
   {
     "kvk_id": 739,
@@ -1613,7 +1813,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.111Z",
-    "updated_at": "2026-01-25T23:26:58.111Z"
+    "updated_at": "2026-01-25T23:26:58.111Z",
+    "kingdom_a_age_days": 135,
+    "kingdom_b_age_days": 132
   },
   {
     "kvk_id": 764,
@@ -1629,7 +1831,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.180Z",
-    "updated_at": "2026-01-25T23:26:58.180Z"
+    "updated_at": "2026-01-25T23:26:58.180Z",
+    "kingdom_a_age_days": 134,
+    "kingdom_b_age_days": 132
   },
   {
     "kvk_id": 797,
@@ -1645,7 +1849,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.274Z",
-    "updated_at": "2026-01-25T23:26:58.274Z"
+    "updated_at": "2026-01-25T23:26:58.274Z",
+    "kingdom_a_age_days": 131,
+    "kingdom_b_age_days": 131
   },
   {
     "kvk_id": 802,
@@ -1661,7 +1867,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.287Z",
-    "updated_at": "2026-01-25T23:26:58.287Z"
+    "updated_at": "2026-01-25T23:26:58.287Z",
+    "kingdom_a_age_days": 131,
+    "kingdom_b_age_days": 127
   },
   {
     "kvk_id": 805,
@@ -1677,7 +1885,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.294Z",
-    "updated_at": "2026-01-25T23:26:58.294Z"
+    "updated_at": "2026-01-25T23:26:58.294Z",
+    "kingdom_a_age_days": 131,
+    "kingdom_b_age_days": 124
   },
   {
     "kvk_id": 813,
@@ -1693,7 +1903,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.319Z",
-    "updated_at": "2026-01-25T23:26:58.319Z"
+    "updated_at": "2026-01-25T23:26:58.319Z",
+    "kingdom_a_age_days": 131,
+    "kingdom_b_age_days": 124
   },
   {
     "kvk_id": 818,
@@ -1709,7 +1921,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.332Z",
-    "updated_at": "2026-01-25T23:26:58.332Z"
+    "updated_at": "2026-01-25T23:26:58.332Z",
+    "kingdom_a_age_days": 129,
+    "kingdom_b_age_days": 127
   },
   {
     "kvk_id": 821,
@@ -1725,7 +1939,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.339Z",
-    "updated_at": "2026-01-25T23:26:58.339Z"
+    "updated_at": "2026-01-25T23:26:58.339Z",
+    "kingdom_a_age_days": 130,
+    "kingdom_b_age_days": 130
   },
   {
     "kvk_id": 824,
@@ -1741,7 +1957,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.347Z",
-    "updated_at": "2026-01-25T23:26:58.347Z"
+    "updated_at": "2026-01-25T23:26:58.347Z",
+    "kingdom_a_age_days": 130,
+    "kingdom_b_age_days": 125
   },
   {
     "kvk_id": 827,
@@ -1757,7 +1975,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.354Z",
-    "updated_at": "2026-01-25T23:26:58.354Z"
+    "updated_at": "2026-01-25T23:26:58.354Z",
+    "kingdom_a_age_days": 130,
+    "kingdom_b_age_days": 128
   },
   {
     "kvk_id": 831,
@@ -1773,7 +1993,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.364Z",
-    "updated_at": "2026-01-25T23:26:58.364Z"
+    "updated_at": "2026-01-25T23:26:58.364Z",
+    "kingdom_a_age_days": 129,
+    "kingdom_b_age_days": 123
   },
   {
     "kvk_id": 835,
@@ -1789,7 +2011,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.373Z",
-    "updated_at": "2026-01-25T23:26:58.373Z"
+    "updated_at": "2026-01-25T23:26:58.373Z",
+    "kingdom_a_age_days": 129,
+    "kingdom_b_age_days": 121
   },
   {
     "kvk_id": 836,
@@ -1805,7 +2029,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.375Z",
-    "updated_at": "2026-01-25T23:26:58.375Z"
+    "updated_at": "2026-01-25T23:26:58.375Z",
+    "kingdom_a_age_days": 129,
+    "kingdom_b_age_days": 126
   },
   {
     "kvk_id": 840,
@@ -1821,7 +2047,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.385Z",
-    "updated_at": "2026-01-25T23:26:58.385Z"
+    "updated_at": "2026-01-25T23:26:58.385Z",
+    "kingdom_a_age_days": 127,
+    "kingdom_b_age_days": 125
   },
   {
     "kvk_id": 841,
@@ -1837,7 +2065,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.387Z",
-    "updated_at": "2026-01-25T23:26:58.387Z"
+    "updated_at": "2026-01-25T23:26:58.387Z",
+    "kingdom_a_age_days": 128,
+    "kingdom_b_age_days": 126
   },
   {
     "kvk_id": 854,
@@ -1853,7 +2083,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.421Z",
-    "updated_at": "2026-01-25T23:26:58.421Z"
+    "updated_at": "2026-01-25T23:26:58.421Z",
+    "kingdom_a_age_days": 127,
+    "kingdom_b_age_days": 126
   },
   {
     "kvk_id": 857,
@@ -1869,7 +2101,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.429Z",
-    "updated_at": "2026-01-25T23:26:58.429Z"
+    "updated_at": "2026-01-25T23:26:58.429Z",
+    "kingdom_a_age_days": 127,
+    "kingdom_b_age_days": 125
   },
   {
     "kvk_id": 859,
@@ -1885,7 +2119,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.435Z",
-    "updated_at": "2026-01-25T23:26:58.435Z"
+    "updated_at": "2026-01-25T23:26:58.435Z",
+    "kingdom_a_age_days": 125,
+    "kingdom_b_age_days": 123
   },
   {
     "kvk_id": 866,
@@ -1901,7 +2137,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.453Z",
-    "updated_at": "2026-01-25T23:26:58.453Z"
+    "updated_at": "2026-01-25T23:26:58.453Z",
+    "kingdom_a_age_days": 126,
+    "kingdom_b_age_days": 120
   },
   {
     "kvk_id": 869,
@@ -1917,7 +2155,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.460Z",
-    "updated_at": "2026-01-25T23:26:58.460Z"
+    "updated_at": "2026-01-25T23:26:58.460Z",
+    "kingdom_a_age_days": 126,
+    "kingdom_b_age_days": 118
   },
   {
     "kvk_id": 875,
@@ -1933,7 +2173,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.477Z",
-    "updated_at": "2026-01-25T23:26:58.477Z"
+    "updated_at": "2026-01-25T23:26:58.477Z",
+    "kingdom_a_age_days": 125,
+    "kingdom_b_age_days": 119
   },
   {
     "kvk_id": 882,
@@ -1949,7 +2191,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.496Z",
-    "updated_at": "2026-01-25T23:26:58.496Z"
+    "updated_at": "2026-01-25T23:26:58.496Z",
+    "kingdom_a_age_days": 123,
+    "kingdom_b_age_days": 122
   },
   {
     "kvk_id": 887,
@@ -1965,7 +2209,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.508Z",
-    "updated_at": "2026-01-25T23:26:58.508Z"
+    "updated_at": "2026-01-25T23:26:58.508Z",
+    "kingdom_a_age_days": 124,
+    "kingdom_b_age_days": 122
   },
   {
     "kvk_id": 898,
@@ -1981,7 +2227,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.538Z",
-    "updated_at": "2026-01-25T23:26:58.538Z"
+    "updated_at": "2026-01-25T23:26:58.538Z",
+    "kingdom_a_age_days": 123,
+    "kingdom_b_age_days": 122
   },
   {
     "kvk_id": 909,
@@ -1997,7 +2245,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.568Z",
-    "updated_at": "2026-01-25T23:26:58.568Z"
+    "updated_at": "2026-01-25T23:26:58.568Z",
+    "kingdom_a_age_days": 122,
+    "kingdom_b_age_days": 121
   },
   {
     "kvk_id": 919,
@@ -2013,7 +2263,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.597Z",
-    "updated_at": "2026-01-25T23:26:58.597Z"
+    "updated_at": "2026-01-25T23:26:58.597Z",
+    "kingdom_a_age_days": 122,
+    "kingdom_b_age_days": 118
   },
   {
     "kvk_id": 924,
@@ -2029,7 +2281,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.610Z",
-    "updated_at": "2026-01-25T23:26:58.610Z"
+    "updated_at": "2026-01-25T23:26:58.610Z",
+    "kingdom_a_age_days": 122,
+    "kingdom_b_age_days": 118
   },
   {
     "kvk_id": 930,
@@ -2045,7 +2299,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.625Z",
-    "updated_at": "2026-01-25T23:26:58.625Z"
+    "updated_at": "2026-01-25T23:26:58.625Z",
+    "kingdom_a_age_days": 121,
+    "kingdom_b_age_days": 120
   },
   {
     "kvk_id": 941,
@@ -2061,7 +2317,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.658Z",
-    "updated_at": "2026-01-25T23:26:58.658Z"
+    "updated_at": "2026-01-25T23:26:58.658Z",
+    "kingdom_a_age_days": 121,
+    "kingdom_b_age_days": 117
   },
   {
     "kvk_id": 944,
@@ -2077,7 +2335,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.667Z",
-    "updated_at": "2026-01-25T23:26:58.667Z"
+    "updated_at": "2026-01-25T23:26:58.667Z",
+    "kingdom_a_age_days": 121,
+    "kingdom_b_age_days": 118
   },
   {
     "kvk_id": 953,
@@ -2093,7 +2353,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.693Z",
-    "updated_at": "2026-01-25T23:26:58.693Z"
+    "updated_at": "2026-01-25T23:26:58.693Z",
+    "kingdom_a_age_days": 120,
+    "kingdom_b_age_days": 114
   },
   {
     "kvk_id": 962,
@@ -2109,7 +2371,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.720Z",
-    "updated_at": "2026-01-25T23:26:58.720Z"
+    "updated_at": "2026-01-25T23:26:58.720Z",
+    "kingdom_a_age_days": 120,
+    "kingdom_b_age_days": 117
   },
   {
     "kvk_id": 966,
@@ -2125,7 +2389,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.731Z",
-    "updated_at": "2026-01-25T23:26:58.731Z"
+    "updated_at": "2026-01-25T23:26:58.731Z",
+    "kingdom_a_age_days": 119,
+    "kingdom_b_age_days": 117
   },
   {
     "kvk_id": 969,
@@ -2141,7 +2407,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.738Z",
-    "updated_at": "2026-01-25T23:26:58.738Z"
+    "updated_at": "2026-01-25T23:26:58.738Z",
+    "kingdom_a_age_days": 119,
+    "kingdom_b_age_days": 115
   },
   {
     "kvk_id": 973,
@@ -2157,7 +2425,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.748Z",
-    "updated_at": "2026-01-25T23:26:58.748Z"
+    "updated_at": "2026-01-25T23:26:58.748Z",
+    "kingdom_a_age_days": 119,
+    "kingdom_b_age_days": 113
   },
   {
     "kvk_id": 978,
@@ -2173,7 +2443,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.760Z",
-    "updated_at": "2026-01-25T23:26:58.760Z"
+    "updated_at": "2026-01-25T23:26:58.760Z",
+    "kingdom_a_age_days": 118,
+    "kingdom_b_age_days": 113
   },
   {
     "kvk_id": 984,
@@ -2189,7 +2461,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.775Z",
-    "updated_at": "2026-01-25T23:26:58.775Z"
+    "updated_at": "2026-01-25T23:26:58.775Z",
+    "kingdom_a_age_days": 118,
+    "kingdom_b_age_days": 117
   },
   {
     "kvk_id": 990,
@@ -2205,7 +2479,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.791Z",
-    "updated_at": "2026-01-25T23:26:58.791Z"
+    "updated_at": "2026-01-25T23:26:58.791Z",
+    "kingdom_a_age_days": 118,
+    "kingdom_b_age_days": 113
   },
   {
     "kvk_id": 998,
@@ -2221,7 +2497,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.817Z",
-    "updated_at": "2026-01-25T23:26:58.817Z"
+    "updated_at": "2026-01-25T23:26:58.817Z",
+    "kingdom_a_age_days": 117,
+    "kingdom_b_age_days": 111
   },
   {
     "kvk_id": 1009,
@@ -2237,7 +2515,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.847Z",
-    "updated_at": "2026-01-25T23:26:58.847Z"
+    "updated_at": "2026-01-25T23:26:58.847Z",
+    "kingdom_a_age_days": 116,
+    "kingdom_b_age_days": 114
   },
   {
     "kvk_id": 1012,
@@ -2253,7 +2533,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.855Z",
-    "updated_at": "2026-01-25T23:26:58.855Z"
+    "updated_at": "2026-01-25T23:26:58.855Z",
+    "kingdom_a_age_days": 116,
+    "kingdom_b_age_days": 112
   },
   {
     "kvk_id": 1015,
@@ -2269,7 +2551,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.861Z",
-    "updated_at": "2026-01-25T23:26:58.861Z"
+    "updated_at": "2026-01-25T23:26:58.861Z",
+    "kingdom_a_age_days": 116,
+    "kingdom_b_age_days": 113
   },
   {
     "kvk_id": 1018,
@@ -2285,7 +2569,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.869Z",
-    "updated_at": "2026-01-25T23:26:58.869Z"
+    "updated_at": "2026-01-25T23:26:58.869Z",
+    "kingdom_a_age_days": 116,
+    "kingdom_b_age_days": 113
   },
   {
     "kvk_id": 1022,
@@ -2301,7 +2587,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.879Z",
-    "updated_at": "2026-01-25T23:26:58.879Z"
+    "updated_at": "2026-01-25T23:26:58.879Z",
+    "kingdom_a_age_days": 116,
+    "kingdom_b_age_days": 111
   },
   {
     "kvk_id": 1026,
@@ -2317,7 +2605,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.888Z",
-    "updated_at": "2026-01-25T23:26:58.888Z"
+    "updated_at": "2026-01-25T23:26:58.888Z",
+    "kingdom_a_age_days": 115,
+    "kingdom_b_age_days": 115
   },
   {
     "kvk_id": 1033,
@@ -2333,7 +2623,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.906Z",
-    "updated_at": "2026-01-25T23:26:58.906Z"
+    "updated_at": "2026-01-25T23:26:58.906Z",
+    "kingdom_a_age_days": 115,
+    "kingdom_b_age_days": 111
   },
   {
     "kvk_id": 1036,
@@ -2349,7 +2641,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.913Z",
-    "updated_at": "2026-01-25T23:26:58.913Z"
+    "updated_at": "2026-01-25T23:26:58.913Z",
+    "kingdom_a_age_days": 115,
+    "kingdom_b_age_days": 112
   },
   {
     "kvk_id": 1042,
@@ -2365,7 +2659,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.928Z",
-    "updated_at": "2026-01-25T23:26:58.928Z"
+    "updated_at": "2026-01-25T23:26:58.928Z",
+    "kingdom_a_age_days": 114,
+    "kingdom_b_age_days": 111
   },
   {
     "kvk_id": 1045,
@@ -2381,7 +2677,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.935Z",
-    "updated_at": "2026-01-25T23:26:58.935Z"
+    "updated_at": "2026-01-25T23:26:58.935Z",
+    "kingdom_a_age_days": 114,
+    "kingdom_b_age_days": 112
   },
   {
     "kvk_id": 1048,
@@ -2397,7 +2695,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.942Z",
-    "updated_at": "2026-01-25T23:26:58.942Z"
+    "updated_at": "2026-01-25T23:26:58.942Z",
+    "kingdom_a_age_days": 114,
+    "kingdom_b_age_days": 111
   },
   {
     "kvk_id": 1065,
@@ -2413,7 +2713,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:58.984Z",
-    "updated_at": "2026-01-25T23:26:58.984Z"
+    "updated_at": "2026-01-25T23:26:58.984Z",
+    "kingdom_a_age_days": 113,
+    "kingdom_b_age_days": 111
   },
   {
     "kvk_id": 1071,
@@ -2429,7 +2731,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.007Z",
-    "updated_at": "2026-01-25T23:26:59.007Z"
+    "updated_at": "2026-01-25T23:26:59.007Z",
+    "kingdom_a_age_days": 111,
+    "kingdom_b_age_days": 112
   },
   {
     "kvk_id": 1073,
@@ -2445,7 +2749,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.012Z",
-    "updated_at": "2026-01-25T23:26:59.012Z"
+    "updated_at": "2026-01-25T23:26:59.012Z",
+    "kingdom_a_age_days": 112,
+    "kingdom_b_age_days": 110
   },
   {
     "kvk_id": 1077,
@@ -2461,7 +2767,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.022Z",
-    "updated_at": "2026-01-25T23:26:59.022Z"
+    "updated_at": "2026-01-25T23:26:59.022Z",
+    "kingdom_a_age_days": 112,
+    "kingdom_b_age_days": 111
   },
   {
     "kvk_id": 1094,
@@ -2477,7 +2785,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.065Z",
-    "updated_at": "2026-01-25T23:26:59.065Z"
+    "updated_at": "2026-01-25T23:26:59.065Z",
+    "kingdom_a_age_days": 110,
+    "kingdom_b_age_days": 107
   },
   {
     "kvk_id": 1100,
@@ -2493,7 +2803,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.079Z",
-    "updated_at": "2026-01-25T23:26:59.079Z"
+    "updated_at": "2026-01-25T23:26:59.079Z",
+    "kingdom_a_age_days": 110,
+    "kingdom_b_age_days": 110
   },
   {
     "kvk_id": 1104,
@@ -2509,7 +2821,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.089Z",
-    "updated_at": "2026-01-25T23:26:59.089Z"
+    "updated_at": "2026-01-25T23:26:59.089Z",
+    "kingdom_a_age_days": 110,
+    "kingdom_b_age_days": 110
   },
   {
     "kvk_id": 1108,
@@ -2525,7 +2839,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.099Z",
-    "updated_at": "2026-01-25T23:26:59.099Z"
+    "updated_at": "2026-01-25T23:26:59.099Z",
+    "kingdom_a_age_days": 110,
+    "kingdom_b_age_days": 108
   },
   {
     "kvk_id": 1111,
@@ -2541,7 +2857,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.108Z",
-    "updated_at": "2026-01-25T23:26:59.108Z"
+    "updated_at": "2026-01-25T23:26:59.108Z",
+    "kingdom_a_age_days": 110,
+    "kingdom_b_age_days": 104
   },
   {
     "kvk_id": 1123,
@@ -2557,7 +2875,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.139Z",
-    "updated_at": "2026-01-25T23:26:59.139Z"
+    "updated_at": "2026-01-25T23:26:59.139Z",
+    "kingdom_a_age_days": 110,
+    "kingdom_b_age_days": 104
   },
   {
     "kvk_id": 1129,
@@ -2573,7 +2893,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.154Z",
-    "updated_at": "2026-01-25T23:26:59.154Z"
+    "updated_at": "2026-01-25T23:26:59.154Z",
+    "kingdom_a_age_days": 109,
+    "kingdom_b_age_days": 108
   },
   {
     "kvk_id": 1133,
@@ -2589,7 +2911,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.165Z",
-    "updated_at": "2026-01-25T23:26:59.165Z"
+    "updated_at": "2026-01-25T23:26:59.165Z",
+    "kingdom_a_age_days": 109,
+    "kingdom_b_age_days": 106
   },
   {
     "kvk_id": 1139,
@@ -2605,7 +2929,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.182Z",
-    "updated_at": "2026-01-25T23:26:59.182Z"
+    "updated_at": "2026-01-25T23:26:59.182Z",
+    "kingdom_a_age_days": 109,
+    "kingdom_b_age_days": 108
   },
   {
     "kvk_id": 1143,
@@ -2621,7 +2947,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.193Z",
-    "updated_at": "2026-01-25T23:26:59.193Z"
+    "updated_at": "2026-01-25T23:26:59.193Z",
+    "kingdom_a_age_days": 109,
+    "kingdom_b_age_days": 105
   },
   {
     "kvk_id": 1146,
@@ -2637,7 +2965,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.202Z",
-    "updated_at": "2026-01-25T23:26:59.202Z"
+    "updated_at": "2026-01-25T23:26:59.202Z",
+    "kingdom_a_age_days": 109,
+    "kingdom_b_age_days": 107
   },
   {
     "kvk_id": 1151,
@@ -2653,7 +2983,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.215Z",
-    "updated_at": "2026-01-25T23:26:59.215Z"
+    "updated_at": "2026-01-25T23:26:59.215Z",
+    "kingdom_a_age_days": 109,
+    "kingdom_b_age_days": 106
   },
   {
     "kvk_id": 1157,
@@ -2669,7 +3001,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.233Z",
-    "updated_at": "2026-01-25T23:26:59.233Z"
+    "updated_at": "2026-01-25T23:26:59.233Z",
+    "kingdom_a_age_days": 109,
+    "kingdom_b_age_days": 106
   },
   {
     "kvk_id": 1163,
@@ -2685,7 +3019,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.249Z",
-    "updated_at": "2026-01-25T23:26:59.249Z"
+    "updated_at": "2026-01-25T23:26:59.249Z",
+    "kingdom_a_age_days": 108,
+    "kingdom_b_age_days": 104
   },
   {
     "kvk_id": 1169,
@@ -2701,7 +3037,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.266Z",
-    "updated_at": "2026-01-25T23:26:59.266Z"
+    "updated_at": "2026-01-25T23:26:59.266Z",
+    "kingdom_a_age_days": 108,
+    "kingdom_b_age_days": 104
   },
   {
     "kvk_id": 1174,
@@ -2717,7 +3055,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.281Z",
-    "updated_at": "2026-01-25T23:26:59.281Z"
+    "updated_at": "2026-01-25T23:26:59.281Z",
+    "kingdom_a_age_days": 108,
+    "kingdom_b_age_days": 106
   },
   {
     "kvk_id": 1177,
@@ -2733,7 +3073,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.290Z",
-    "updated_at": "2026-01-25T23:26:59.290Z"
+    "updated_at": "2026-01-25T23:26:59.290Z",
+    "kingdom_a_age_days": 108,
+    "kingdom_b_age_days": 105
   },
   {
     "kvk_id": 1188,
@@ -2749,7 +3091,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.326Z",
-    "updated_at": "2026-01-25T23:26:59.326Z"
+    "updated_at": "2026-01-25T23:26:59.326Z",
+    "kingdom_a_age_days": 108,
+    "kingdom_b_age_days": 104
   },
   {
     "kvk_id": 1191,
@@ -2765,7 +3109,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.334Z",
-    "updated_at": "2026-01-25T23:26:59.334Z"
+    "updated_at": "2026-01-25T23:26:59.334Z",
+    "kingdom_a_age_days": 107,
+    "kingdom_b_age_days": 105
   },
   {
     "kvk_id": 1195,
@@ -2781,7 +3127,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.345Z",
-    "updated_at": "2026-01-25T23:26:59.345Z"
+    "updated_at": "2026-01-25T23:26:59.345Z",
+    "kingdom_a_age_days": 107,
+    "kingdom_b_age_days": 107
   },
   {
     "kvk_id": 1203,
@@ -2797,7 +3145,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.368Z",
-    "updated_at": "2026-01-25T23:26:59.368Z"
+    "updated_at": "2026-01-25T23:26:59.368Z",
+    "kingdom_a_age_days": 107,
+    "kingdom_b_age_days": 104
   },
   {
     "kvk_id": 1212,
@@ -2813,7 +3163,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.392Z",
-    "updated_at": "2026-01-25T23:26:59.392Z"
+    "updated_at": "2026-01-25T23:26:59.392Z",
+    "kingdom_a_age_days": 107,
+    "kingdom_b_age_days": 104
   },
   {
     "kvk_id": 1215,
@@ -2829,7 +3181,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.400Z",
-    "updated_at": "2026-01-25T23:26:59.400Z"
+    "updated_at": "2026-01-25T23:26:59.400Z",
+    "kingdom_a_age_days": 106,
+    "kingdom_b_age_days": 104
   },
   {
     "kvk_id": 1218,
@@ -2845,7 +3199,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.408Z",
-    "updated_at": "2026-01-25T23:26:59.408Z"
+    "updated_at": "2026-01-25T23:26:59.408Z",
+    "kingdom_a_age_days": 106,
+    "kingdom_b_age_days": 105
   },
   {
     "kvk_id": 1226,
@@ -2861,7 +3217,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.429Z",
-    "updated_at": "2026-01-25T23:26:59.429Z"
+    "updated_at": "2026-01-25T23:26:59.429Z",
+    "kingdom_a_age_days": 106,
+    "kingdom_b_age_days": 105
   },
   {
     "kvk_id": 1237,
@@ -2877,7 +3235,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.459Z",
-    "updated_at": "2026-01-25T23:26:59.459Z"
+    "updated_at": "2026-01-25T23:26:59.459Z",
+    "kingdom_a_age_days": 106,
+    "kingdom_b_age_days": 105
   },
   {
     "kvk_id": 1242,
@@ -2893,7 +3253,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.471Z",
-    "updated_at": "2026-01-25T23:26:59.471Z"
+    "updated_at": "2026-01-25T23:26:59.471Z",
+    "kingdom_a_age_days": 105,
+    "kingdom_b_age_days": 105
   },
   {
     "kvk_id": 1272,
@@ -2909,7 +3271,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.544Z",
-    "updated_at": "2026-01-25T23:26:59.544Z"
+    "updated_at": "2026-01-25T23:26:59.544Z",
+    "kingdom_a_age_days": 104,
+    "kingdom_b_age_days": 104
   },
   {
     "kvk_id": 1280,
@@ -2925,7 +3289,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.567Z",
-    "updated_at": "2026-01-25T23:26:59.567Z"
+    "updated_at": "2026-01-25T23:26:59.567Z",
+    "kingdom_a_age_days": 103,
+    "kingdom_b_age_days": 99
   },
   {
     "kvk_id": 1284,
@@ -2941,7 +3307,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.577Z",
-    "updated_at": "2026-01-25T23:26:59.577Z"
+    "updated_at": "2026-01-25T23:26:59.577Z",
+    "kingdom_a_age_days": 103,
+    "kingdom_b_age_days": 100
   },
   {
     "kvk_id": 1287,
@@ -2957,7 +3325,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.587Z",
-    "updated_at": "2026-01-25T23:26:59.587Z"
+    "updated_at": "2026-01-25T23:26:59.587Z",
+    "kingdom_a_age_days": 103,
+    "kingdom_b_age_days": 102
   },
   {
     "kvk_id": 1291,
@@ -2973,7 +3343,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.598Z",
-    "updated_at": "2026-01-25T23:26:59.598Z"
+    "updated_at": "2026-01-25T23:26:59.598Z",
+    "kingdom_a_age_days": 103,
+    "kingdom_b_age_days": 99
   },
   {
     "kvk_id": 1295,
@@ -2989,7 +3361,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.609Z",
-    "updated_at": "2026-01-25T23:26:59.609Z"
+    "updated_at": "2026-01-25T23:26:59.609Z",
+    "kingdom_a_age_days": 103,
+    "kingdom_b_age_days": 101
   },
   {
     "kvk_id": 1299,
@@ -3005,7 +3379,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.620Z",
-    "updated_at": "2026-01-25T23:26:59.620Z"
+    "updated_at": "2026-01-25T23:26:59.620Z",
+    "kingdom_a_age_days": 102,
+    "kingdom_b_age_days": 97
   },
   {
     "kvk_id": 1301,
@@ -3021,7 +3397,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.626Z",
-    "updated_at": "2026-01-25T23:26:59.626Z"
+    "updated_at": "2026-01-25T23:26:59.626Z",
+    "kingdom_a_age_days": 102,
+    "kingdom_b_age_days": 97
   },
   {
     "kvk_id": 1303,
@@ -3037,7 +3415,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.631Z",
-    "updated_at": "2026-01-25T23:26:59.631Z"
+    "updated_at": "2026-01-25T23:26:59.631Z",
+    "kingdom_a_age_days": 102,
+    "kingdom_b_age_days": 100
   },
   {
     "kvk_id": 1307,
@@ -3053,7 +3433,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.643Z",
-    "updated_at": "2026-01-25T23:26:59.643Z"
+    "updated_at": "2026-01-25T23:26:59.643Z",
+    "kingdom_a_age_days": 102,
+    "kingdom_b_age_days": 99
   },
   {
     "kvk_id": 1310,
@@ -3069,7 +3451,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.654Z",
-    "updated_at": "2026-01-25T23:26:59.654Z"
+    "updated_at": "2026-01-25T23:26:59.654Z",
+    "kingdom_a_age_days": 102,
+    "kingdom_b_age_days": 100
   },
   {
     "kvk_id": 1313,
@@ -3085,7 +3469,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.663Z",
-    "updated_at": "2026-01-25T23:26:59.663Z"
+    "updated_at": "2026-01-25T23:26:59.663Z",
+    "kingdom_a_age_days": 102,
+    "kingdom_b_age_days": 100
   },
   {
     "kvk_id": 1316,
@@ -3101,7 +3487,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.672Z",
-    "updated_at": "2026-01-25T23:26:59.672Z"
+    "updated_at": "2026-01-25T23:26:59.672Z",
+    "kingdom_a_age_days": 102,
+    "kingdom_b_age_days": 98
   },
   {
     "kvk_id": 1319,
@@ -3117,7 +3505,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.679Z",
-    "updated_at": "2026-01-25T23:26:59.679Z"
+    "updated_at": "2026-01-25T23:26:59.679Z",
+    "kingdom_a_age_days": 102,
+    "kingdom_b_age_days": 100
   },
   {
     "kvk_id": 1322,
@@ -3133,7 +3523,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.688Z",
-    "updated_at": "2026-01-25T23:26:59.688Z"
+    "updated_at": "2026-01-25T23:26:59.688Z",
+    "kingdom_a_age_days": 101,
+    "kingdom_b_age_days": 97
   },
   {
     "kvk_id": 1324,
@@ -3149,7 +3541,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.693Z",
-    "updated_at": "2026-01-25T23:26:59.693Z"
+    "updated_at": "2026-01-25T23:26:59.693Z",
+    "kingdom_a_age_days": 100,
+    "kingdom_b_age_days": 98
   },
   {
     "kvk_id": 1328,
@@ -3165,7 +3559,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.703Z",
-    "updated_at": "2026-01-25T23:26:59.703Z"
+    "updated_at": "2026-01-25T23:26:59.703Z",
+    "kingdom_a_age_days": 101,
+    "kingdom_b_age_days": 97
   },
   {
     "kvk_id": 1330,
@@ -3181,7 +3577,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.709Z",
-    "updated_at": "2026-01-25T23:26:59.709Z"
+    "updated_at": "2026-01-25T23:26:59.709Z",
+    "kingdom_a_age_days": 101,
+    "kingdom_b_age_days": 99
   },
   {
     "kvk_id": 1337,
@@ -3197,7 +3595,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.728Z",
-    "updated_at": "2026-01-25T23:26:59.728Z"
+    "updated_at": "2026-01-25T23:26:59.728Z",
+    "kingdom_a_age_days": 101,
+    "kingdom_b_age_days": 97
   },
   {
     "kvk_id": 1340,
@@ -3213,7 +3613,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.737Z",
-    "updated_at": "2026-01-25T23:26:59.737Z"
+    "updated_at": "2026-01-25T23:26:59.737Z",
+    "kingdom_a_age_days": 101,
+    "kingdom_b_age_days": 97
   },
   {
     "kvk_id": 1345,
@@ -3229,7 +3631,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.751Z",
-    "updated_at": "2026-01-25T23:26:59.751Z"
+    "updated_at": "2026-01-25T23:26:59.751Z",
+    "kingdom_a_age_days": 100,
+    "kingdom_b_age_days": 99
   },
   {
     "kvk_id": 1349,
@@ -3245,7 +3649,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.763Z",
-    "updated_at": "2026-01-25T23:26:59.763Z"
+    "updated_at": "2026-01-25T23:26:59.763Z",
+    "kingdom_a_age_days": 100,
+    "kingdom_b_age_days": 98
   },
   {
     "kvk_id": 1356,
@@ -3261,7 +3667,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.782Z",
-    "updated_at": "2026-01-25T23:26:59.782Z"
+    "updated_at": "2026-01-25T23:26:59.782Z",
+    "kingdom_a_age_days": 99,
+    "kingdom_b_age_days": 97
   },
   {
     "kvk_id": 1360,
@@ -3277,7 +3685,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.795Z",
-    "updated_at": "2026-01-25T23:26:59.795Z"
+    "updated_at": "2026-01-25T23:26:59.795Z",
+    "kingdom_a_age_days": 99,
+    "kingdom_b_age_days": 97
   },
   {
     "kvk_id": 1363,
@@ -3293,7 +3703,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.806Z",
-    "updated_at": "2026-01-25T23:26:59.806Z"
+    "updated_at": "2026-01-25T23:26:59.806Z",
+    "kingdom_a_age_days": 99,
+    "kingdom_b_age_days": 98
   },
   {
     "kvk_id": 1365,
@@ -3309,7 +3721,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.813Z",
-    "updated_at": "2026-01-25T23:26:59.813Z"
+    "updated_at": "2026-01-25T23:26:59.813Z",
+    "kingdom_a_age_days": 98,
+    "kingdom_b_age_days": 96
   },
   {
     "kvk_id": 1372,
@@ -3325,7 +3739,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.834Z",
-    "updated_at": "2026-01-25T23:26:59.834Z"
+    "updated_at": "2026-01-25T23:26:59.834Z",
+    "kingdom_a_age_days": 98,
+    "kingdom_b_age_days": 97
   },
   {
     "kvk_id": 1380,
@@ -3341,7 +3757,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.857Z",
-    "updated_at": "2026-01-25T23:26:59.857Z"
+    "updated_at": "2026-01-25T23:26:59.857Z",
+    "kingdom_a_age_days": 96,
+    "kingdom_b_age_days": 92
   },
   {
     "kvk_id": 1385,
@@ -3357,7 +3775,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.870Z",
-    "updated_at": "2026-01-25T23:26:59.870Z"
+    "updated_at": "2026-01-25T23:26:59.870Z",
+    "kingdom_a_age_days": 96,
+    "kingdom_b_age_days": 95
   },
   {
     "kvk_id": 1394,
@@ -3373,7 +3793,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.895Z",
-    "updated_at": "2026-01-25T23:26:59.895Z"
+    "updated_at": "2026-01-25T23:26:59.895Z",
+    "kingdom_a_age_days": 96,
+    "kingdom_b_age_days": 93
   },
   {
     "kvk_id": 1398,
@@ -3389,7 +3811,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.906Z",
-    "updated_at": "2026-01-25T23:26:59.906Z"
+    "updated_at": "2026-01-25T23:26:59.906Z",
+    "kingdom_a_age_days": 96,
+    "kingdom_b_age_days": 90
   },
   {
     "kvk_id": 1401,
@@ -3405,7 +3829,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.915Z",
-    "updated_at": "2026-01-25T23:26:59.915Z"
+    "updated_at": "2026-01-25T23:26:59.915Z",
+    "kingdom_a_age_days": 96,
+    "kingdom_b_age_days": 94
   },
   {
     "kvk_id": 1405,
@@ -3421,7 +3847,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.927Z",
-    "updated_at": "2026-01-25T23:26:59.927Z"
+    "updated_at": "2026-01-25T23:26:59.927Z",
+    "kingdom_a_age_days": 96,
+    "kingdom_b_age_days": 95
   },
   {
     "kvk_id": 1409,
@@ -3437,7 +3865,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.940Z",
-    "updated_at": "2026-01-25T23:26:59.940Z"
+    "updated_at": "2026-01-25T23:26:59.940Z",
+    "kingdom_a_age_days": 95,
+    "kingdom_b_age_days": 92
   },
   {
     "kvk_id": 1416,
@@ -3453,7 +3883,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.960Z",
-    "updated_at": "2026-01-25T23:26:59.960Z"
+    "updated_at": "2026-01-25T23:26:59.960Z",
+    "kingdom_a_age_days": 95,
+    "kingdom_b_age_days": 90
   },
   {
     "kvk_id": 1420,
@@ -3469,7 +3901,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.971Z",
-    "updated_at": "2026-01-25T23:26:59.971Z"
+    "updated_at": "2026-01-25T23:26:59.971Z",
+    "kingdom_a_age_days": 95,
+    "kingdom_b_age_days": 92
   },
   {
     "kvk_id": 1424,
@@ -3485,7 +3919,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.981Z",
-    "updated_at": "2026-01-25T23:26:59.981Z"
+    "updated_at": "2026-01-25T23:26:59.981Z",
+    "kingdom_a_age_days": 95,
+    "kingdom_b_age_days": 91
   },
   {
     "kvk_id": 1426,
@@ -3501,7 +3937,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.986Z",
-    "updated_at": "2026-01-25T23:26:59.986Z"
+    "updated_at": "2026-01-25T23:26:59.986Z",
+    "kingdom_a_age_days": 95,
+    "kingdom_b_age_days": 94
   },
   {
     "kvk_id": 1430,
@@ -3517,7 +3955,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:26:59.997Z",
-    "updated_at": "2026-01-25T23:26:59.997Z"
+    "updated_at": "2026-01-25T23:26:59.997Z",
+    "kingdom_a_age_days": 94,
+    "kingdom_b_age_days": 93
   },
   {
     "kvk_id": 1434,
@@ -3533,7 +3973,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.009Z",
-    "updated_at": "2026-01-25T23:27:00.009Z"
+    "updated_at": "2026-01-25T23:27:00.009Z",
+    "kingdom_a_age_days": 94,
+    "kingdom_b_age_days": 94
   },
   {
     "kvk_id": 1439,
@@ -3549,7 +3991,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.027Z",
-    "updated_at": "2026-01-25T23:27:00.027Z"
+    "updated_at": "2026-01-25T23:27:00.027Z",
+    "kingdom_a_age_days": 94,
+    "kingdom_b_age_days": 93
   },
   {
     "kvk_id": 1446,
@@ -3565,7 +4009,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.047Z",
-    "updated_at": "2026-01-25T23:27:00.047Z"
+    "updated_at": "2026-01-25T23:27:00.047Z",
+    "kingdom_a_age_days": 94,
+    "kingdom_b_age_days": 92
   },
   {
     "kvk_id": 1458,
@@ -3581,7 +4027,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.082Z",
-    "updated_at": "2026-01-25T23:27:00.082Z"
+    "updated_at": "2026-01-25T23:27:00.082Z",
+    "kingdom_a_age_days": 93,
+    "kingdom_b_age_days": 91
   },
   {
     "kvk_id": 1467,
@@ -3597,7 +4045,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.109Z",
-    "updated_at": "2026-01-25T23:27:00.109Z"
+    "updated_at": "2026-01-25T23:27:00.109Z",
+    "kingdom_a_age_days": 92,
+    "kingdom_b_age_days": 92
   },
   {
     "kvk_id": 1470,
@@ -3613,7 +4063,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.117Z",
-    "updated_at": "2026-01-25T23:27:00.117Z"
+    "updated_at": "2026-01-25T23:27:00.117Z",
+    "kingdom_a_age_days": 92,
+    "kingdom_b_age_days": 91
   },
   {
     "kvk_id": 1480,
@@ -3629,7 +4081,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.145Z",
-    "updated_at": "2026-01-25T23:27:00.145Z"
+    "updated_at": "2026-01-25T23:27:00.145Z",
+    "kingdom_a_age_days": 91,
+    "kingdom_b_age_days": 90
   },
   {
     "kvk_id": 1483,
@@ -3645,7 +4099,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.153Z",
-    "updated_at": "2026-01-25T23:27:00.153Z"
+    "updated_at": "2026-01-25T23:27:00.153Z",
+    "kingdom_a_age_days": 91,
+    "kingdom_b_age_days": 90
   },
   {
     "kvk_id": 1487,
@@ -3661,7 +4117,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.164Z",
-    "updated_at": "2026-01-25T23:27:00.164Z"
+    "updated_at": "2026-01-25T23:27:00.164Z",
+    "kingdom_a_age_days": 91,
+    "kingdom_b_age_days": 90
   },
   {
     "kvk_id": 1495,
@@ -3677,7 +4135,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.184Z",
-    "updated_at": "2026-01-25T23:27:00.184Z"
+    "updated_at": "2026-01-25T23:27:00.184Z",
+    "kingdom_a_age_days": 91,
+    "kingdom_b_age_days": 90
   },
   {
     "kvk_id": 1509,
@@ -3693,7 +4153,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.220Z",
-    "updated_at": "2026-01-25T23:27:00.220Z"
+    "updated_at": "2026-01-25T23:27:00.220Z",
+    "kingdom_a_age_days": 90,
+    "kingdom_b_age_days": 90
   },
   {
     "kvk_id": 1511,
@@ -3709,7 +4171,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.227Z",
-    "updated_at": "2026-01-25T23:27:00.227Z"
+    "updated_at": "2026-01-25T23:27:00.227Z",
+    "kingdom_a_age_days": 88,
+    "kingdom_b_age_days": 87
   },
   {
     "kvk_id": 1516,
@@ -3725,7 +4189,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.240Z",
-    "updated_at": "2026-01-25T23:27:00.240Z"
+    "updated_at": "2026-01-25T23:27:00.240Z",
+    "kingdom_a_age_days": 89,
+    "kingdom_b_age_days": 84
   },
   {
     "kvk_id": 1520,
@@ -3741,7 +4207,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.251Z",
-    "updated_at": "2026-01-25T23:27:00.251Z"
+    "updated_at": "2026-01-25T23:27:00.251Z",
+    "kingdom_a_age_days": 89,
+    "kingdom_b_age_days": 83
   },
   {
     "kvk_id": 1523,
@@ -3757,7 +4225,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.258Z",
-    "updated_at": "2026-01-25T23:27:00.258Z"
+    "updated_at": "2026-01-25T23:27:00.258Z",
+    "kingdom_a_age_days": 89,
+    "kingdom_b_age_days": 88
   },
   {
     "kvk_id": 1527,
@@ -3773,7 +4243,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.267Z",
-    "updated_at": "2026-01-25T23:27:00.267Z"
+    "updated_at": "2026-01-25T23:27:00.267Z",
+    "kingdom_a_age_days": 88,
+    "kingdom_b_age_days": 85
   },
   {
     "kvk_id": 1532,
@@ -3789,7 +4261,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.280Z",
-    "updated_at": "2026-01-25T23:27:00.280Z"
+    "updated_at": "2026-01-25T23:27:00.280Z",
+    "kingdom_a_age_days": 88,
+    "kingdom_b_age_days": 87
   },
   {
     "kvk_id": 1535,
@@ -3805,7 +4279,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.287Z",
-    "updated_at": "2026-01-25T23:27:00.287Z"
+    "updated_at": "2026-01-25T23:27:00.287Z",
+    "kingdom_a_age_days": 87,
+    "kingdom_b_age_days": 83
   },
   {
     "kvk_id": 1540,
@@ -3821,7 +4297,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.301Z",
-    "updated_at": "2026-01-25T23:27:00.301Z"
+    "updated_at": "2026-01-25T23:27:00.301Z",
+    "kingdom_a_age_days": 88,
+    "kingdom_b_age_days": 88
   },
   {
     "kvk_id": 1543,
@@ -3837,7 +4315,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.311Z",
-    "updated_at": "2026-01-25T23:27:00.311Z"
+    "updated_at": "2026-01-25T23:27:00.311Z",
+    "kingdom_a_age_days": 86,
+    "kingdom_b_age_days": 87
   },
   {
     "kvk_id": 1549,
@@ -3853,7 +4333,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.327Z",
-    "updated_at": "2026-01-25T23:27:00.327Z"
+    "updated_at": "2026-01-25T23:27:00.327Z",
+    "kingdom_a_age_days": 86,
+    "kingdom_b_age_days": 84
   },
   {
     "kvk_id": 1553,
@@ -3869,7 +4351,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.337Z",
-    "updated_at": "2026-01-25T23:27:00.337Z"
+    "updated_at": "2026-01-25T23:27:00.337Z",
+    "kingdom_a_age_days": 87,
+    "kingdom_b_age_days": 83
   },
   {
     "kvk_id": 1559,
@@ -3885,7 +4369,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.353Z",
-    "updated_at": "2026-01-25T23:27:00.353Z"
+    "updated_at": "2026-01-25T23:27:00.353Z",
+    "kingdom_a_age_days": 87,
+    "kingdom_b_age_days": 86
   },
   {
     "kvk_id": 1563,
@@ -3901,7 +4387,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.362Z",
-    "updated_at": "2026-01-25T23:27:00.362Z"
+    "updated_at": "2026-01-25T23:27:00.362Z",
+    "kingdom_a_age_days": 86,
+    "kingdom_b_age_days": 84
   },
   {
     "kvk_id": 1565,
@@ -3917,7 +4405,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.367Z",
-    "updated_at": "2026-01-25T23:27:00.367Z"
+    "updated_at": "2026-01-25T23:27:00.367Z",
+    "kingdom_a_age_days": 86,
+    "kingdom_b_age_days": 84
   },
   {
     "kvk_id": 1569,
@@ -3933,7 +4423,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.377Z",
-    "updated_at": "2026-01-25T23:27:00.377Z"
+    "updated_at": "2026-01-25T23:27:00.377Z",
+    "kingdom_a_age_days": 86,
+    "kingdom_b_age_days": 83
   },
   {
     "kvk_id": 1571,
@@ -3949,7 +4441,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.382Z",
-    "updated_at": "2026-01-25T23:27:00.382Z"
+    "updated_at": "2026-01-25T23:27:00.382Z",
+    "kingdom_a_age_days": 86,
+    "kingdom_b_age_days": 83
   },
   {
     "kvk_id": 1573,
@@ -3965,7 +4459,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.387Z",
-    "updated_at": "2026-01-25T23:27:00.387Z"
+    "updated_at": "2026-01-25T23:27:00.387Z",
+    "kingdom_a_age_days": 86,
+    "kingdom_b_age_days": 84
   },
   {
     "kvk_id": 1579,
@@ -3981,7 +4477,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.402Z",
-    "updated_at": "2026-01-25T23:27:00.402Z"
+    "updated_at": "2026-01-25T23:27:00.402Z",
+    "kingdom_a_age_days": 85,
+    "kingdom_b_age_days": 85
   },
   {
     "kvk_id": 1582,
@@ -3997,7 +4495,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.410Z",
-    "updated_at": "2026-01-25T23:27:00.410Z"
+    "updated_at": "2026-01-25T23:27:00.410Z",
+    "kingdom_a_age_days": 85,
+    "kingdom_b_age_days": 84
   },
   {
     "kvk_id": 1586,
@@ -4013,7 +4513,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.421Z",
-    "updated_at": "2026-01-25T23:27:00.421Z"
+    "updated_at": "2026-01-25T23:27:00.421Z",
+    "kingdom_a_age_days": 84,
+    "kingdom_b_age_days": 83
   },
   {
     "kvk_id": 1592,
@@ -4029,7 +4531,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.438Z",
-    "updated_at": "2026-01-25T23:27:00.438Z"
+    "updated_at": "2026-01-25T23:27:00.438Z",
+    "kingdom_a_age_days": 82,
+    "kingdom_b_age_days": 83
   },
   {
     "kvk_id": 1595,
@@ -4045,7 +4549,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.445Z",
-    "updated_at": "2026-01-25T23:27:00.445Z"
+    "updated_at": "2026-01-25T23:27:00.445Z",
+    "kingdom_a_age_days": 81,
+    "kingdom_b_age_days": 81
   },
   {
     "kvk_id": 1600,
@@ -4061,7 +4567,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.458Z",
-    "updated_at": "2026-01-25T23:27:00.458Z"
+    "updated_at": "2026-01-25T23:27:00.458Z",
+    "kingdom_a_age_days": 81,
+    "kingdom_b_age_days": 80
   },
   {
     "kvk_id": 1605,
@@ -4077,7 +4585,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.470Z",
-    "updated_at": "2026-01-25T23:27:00.470Z"
+    "updated_at": "2026-01-25T23:27:00.470Z",
+    "kingdom_a_age_days": 82,
+    "kingdom_b_age_days": 79
   },
   {
     "kvk_id": 1610,
@@ -4093,7 +4603,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.485Z",
-    "updated_at": "2026-01-25T23:27:00.485Z"
+    "updated_at": "2026-01-25T23:27:00.485Z",
+    "kingdom_a_age_days": 82,
+    "kingdom_b_age_days": 81
   },
   {
     "kvk_id": 1615,
@@ -4109,7 +4621,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.501Z",
-    "updated_at": "2026-01-25T23:27:00.501Z"
+    "updated_at": "2026-01-25T23:27:00.501Z",
+    "kingdom_a_age_days": 82,
+    "kingdom_b_age_days": 80
   },
   {
     "kvk_id": 1620,
@@ -4125,7 +4639,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.516Z",
-    "updated_at": "2026-01-25T23:27:00.516Z"
+    "updated_at": "2026-01-25T23:27:00.516Z",
+    "kingdom_a_age_days": 82,
+    "kingdom_b_age_days": 79
   },
   {
     "kvk_id": 1627,
@@ -4141,7 +4657,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.534Z",
-    "updated_at": "2026-01-25T23:27:00.534Z"
+    "updated_at": "2026-01-25T23:27:00.534Z",
+    "kingdom_a_age_days": 81,
+    "kingdom_b_age_days": 80
   },
   {
     "kvk_id": 1632,
@@ -4157,7 +4675,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.546Z",
-    "updated_at": "2026-01-25T23:27:00.546Z"
+    "updated_at": "2026-01-25T23:27:00.546Z",
+    "kingdom_a_age_days": 81,
+    "kingdom_b_age_days": 81
   },
   {
     "kvk_id": 1649,
@@ -4173,7 +4693,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.590Z",
-    "updated_at": "2026-01-25T23:27:00.590Z"
+    "updated_at": "2026-01-25T23:27:00.590Z",
+    "kingdom_a_age_days": 79,
+    "kingdom_b_age_days": 80
   },
   {
     "kvk_id": 1660,
@@ -4189,7 +4711,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.621Z",
-    "updated_at": "2026-01-25T23:27:00.621Z"
+    "updated_at": "2026-01-25T23:27:00.621Z",
+    "kingdom_a_age_days": 80,
+    "kingdom_b_age_days": 79
   },
   {
     "kvk_id": 1670,
@@ -4205,7 +4729,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.645Z",
-    "updated_at": "2026-01-25T23:27:00.645Z"
+    "updated_at": "2026-01-25T23:27:00.645Z",
+    "kingdom_a_age_days": 79,
+    "kingdom_b_age_days": 76
   },
   {
     "kvk_id": 1675,
@@ -4221,7 +4747,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.659Z",
-    "updated_at": "2026-01-25T23:27:00.659Z"
+    "updated_at": "2026-01-25T23:27:00.659Z",
+    "kingdom_a_age_days": 78,
+    "kingdom_b_age_days": 78
   },
   {
     "kvk_id": 1678,
@@ -4237,7 +4765,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.668Z",
-    "updated_at": "2026-01-25T23:27:00.668Z"
+    "updated_at": "2026-01-25T23:27:00.668Z",
+    "kingdom_a_age_days": 78,
+    "kingdom_b_age_days": 77
   },
   {
     "kvk_id": 1682,
@@ -4253,7 +4783,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.678Z",
-    "updated_at": "2026-01-25T23:27:00.678Z"
+    "updated_at": "2026-01-25T23:27:00.678Z",
+    "kingdom_a_age_days": 78,
+    "kingdom_b_age_days": 78
   },
   {
     "kvk_id": 1686,
@@ -4269,7 +4801,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.688Z",
-    "updated_at": "2026-01-25T23:27:00.688Z"
+    "updated_at": "2026-01-25T23:27:00.688Z",
+    "kingdom_a_age_days": 78,
+    "kingdom_b_age_days": 77
   },
   {
     "kvk_id": 1692,
@@ -4285,7 +4819,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.702Z",
-    "updated_at": "2026-01-25T23:27:00.702Z"
+    "updated_at": "2026-01-25T23:27:00.702Z",
+    "kingdom_a_age_days": 77,
+    "kingdom_b_age_days": 77
   },
   {
     "kvk_id": 1695,
@@ -4301,7 +4837,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.709Z",
-    "updated_at": "2026-01-25T23:27:00.709Z"
+    "updated_at": "2026-01-25T23:27:00.709Z",
+    "kingdom_a_age_days": 77,
+    "kingdom_b_age_days": 76
   },
   {
     "kvk_id": 1702,
@@ -4317,7 +4855,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.726Z",
-    "updated_at": "2026-01-25T23:27:00.726Z"
+    "updated_at": "2026-01-25T23:27:00.726Z",
+    "kingdom_a_age_days": 77,
+    "kingdom_b_age_days": 76
   },
   {
     "kvk_id": 1706,
@@ -4333,7 +4873,9 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.736Z",
-    "updated_at": "2026-01-25T23:27:00.736Z"
+    "updated_at": "2026-01-25T23:27:00.736Z",
+    "kingdom_a_age_days": 77,
+    "kingdom_b_age_days": 75
   },
   {
     "kvk_id": 1710,
@@ -4349,6 +4891,8 @@
     "kvk_title": "KvK #5",
     "description": "a",
     "created_at": "2026-01-25T23:27:00.747Z",
-    "updated_at": "2026-01-25T23:27:00.747Z"
+    "updated_at": "2026-01-25T23:27:00.747Z",
+    "kingdom_a_age_days": 76,
+    "kingdom_b_age_days": 75
   }
 ]
