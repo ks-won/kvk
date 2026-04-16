@@ -1,338 +1,447 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>KvK Analytics Hub</title>
-	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-	<script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kingdom Rankings</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        [v-cloak] { display: none; }
+        .delta-up { color: #4ade80; }
+        .delta-down { color: #f87171; }
+        .delta-neutral { color: #9ca3af; }
+    </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans">
-	<div id="app" class="container mx-auto px-4 py-8">
-		
-		<header class="mb-8 text-center">
-			<h1 class="text-4xl font-bold text-yellow-500 mb-2 cursor-pointer" @click="goHome">KVK PERFORMANCE INDEX</h1>
-			<p class="text-gray-400 font-medium tracking-wide">Hybrid Elo Analytics & Trend Tracking</p>
-		</header>
+<body class="bg-gray-900 text-gray-100 min-h-screen font-sans selection:bg-blue-500/30">
+    <div id="app" v-cloak>
+        <nav class="bg-gray-800 border-b border-gray-700 p-4 sticky top-0 z-50 shadow-xl">
+            <div class="max-w-7xl mx-auto flex justify-between items-center">
+                <a href="#/" class="text-xl font-black tracking-tighter text-blue-400 uppercase">Rankings</a>
+                <div class="space-x-6 text-xs font-bold uppercase tracking-widest">
+                    <a href="#/" class="hover:text-blue-400 transition">Leaderboard</a>
+                    <a href="#/predict" class="hover:text-blue-400 transition">Predictor</a>
+                </div>
+            </div>
+        </nav>
 
-		<div v-if="!selectedId" class="bg-gray-800 rounded-3xl shadow-2xl overflow-hidden animate-fadeIn border border-gray-700">
-			<div class="p-6 border-b border-gray-700 bg-gray-900/30 flex flex-col lg:flex-row justify-between items-center gap-6">
-				<div class="flex flex-col md:flex-row gap-4 w-full lg:w-auto">
-					<input v-model="search" type="text" placeholder="Search ID..." class="bg-gray-700 text-white px-5 py-3 rounded-xl focus:ring-2 focus:ring-yellow-500 outline-none border border-gray-600 w-full md:w-64 transition-all">
-					
-					<select v-model="selectedPersona" class="bg-gray-700 text-white px-5 py-3 rounded-xl focus:ring-2 focus:ring-yellow-500 outline-none border border-gray-600 cursor-pointer transition-all">
-						<option value="All">All Classifications</option>
-						<option v-for="(desc, name) in PERSONA_MAP" :key="name" :value="name">{{ name }}</option>
-					</select>
-				</div>
-				<div class="text-xs text-gray-500 uppercase font-black tracking-widest hidden md:block text-right">
-					Analyzing {{ filteredKingdoms.length }} Kingdoms<br>
-					<span class="opacity-50 font-normal">Click rows for deep scouting</span>
-				</div>
-			</div>
+        <main class="max-w-7xl mx-auto p-4 md:p-8">
+            <div v-if="loading" class="flex flex-col justify-center items-center h-96 space-y-4">
+                <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-400"></div>
+                <span class="text-xs font-black text-gray-500 uppercase tracking-widest">Synchronizing Data...</span>
+            </div>
 
-			<div class="overflow-x-auto">
-				<table class="w-full text-left border-collapse">
-					<thead>
-						<tr class="bg-gray-900/50 text-yellow-500 uppercase text-[10px] font-black tracking-[0.2em]">
-							<th @click="sortBy('id')" class="px-8 py-5 cursor-pointer hover:bg-gray-700 transition">Kingdom</th>
-							<th @click="sortBy('prep_elo')" class="px-8 py-5 cursor-pointer hover:bg-gray-700 transition text-center">Prep Elo</th>
-							<th @click="sortBy('castle_elo')" class="px-8 py-5 cursor-pointer hover:bg-gray-700 transition text-center">Castle Elo</th>
-							<th class="px-8 py-5 text-center">Classification</th>
-						</tr>
-					</thead>
-					<tbody class="divide-y divide-gray-700/50">
-						<tr v-for="k in filteredKingdoms" :key="k.id" 
-							@click="selectKingdom(k.id)"
-							class="hover:bg-gray-700/50 cursor-pointer transition group">
-							<td class="px-8 py-5">
-								<span class="font-mono text-xl font-bold group-hover:text-yellow-500 transition">#{{ k.id }}</span>
-							</td>
-							<td class="px-8 py-5 text-center">
-								<div class="font-black text-blue-400 text-xl">{{ k.latest.prep_elo }}</div>
-								<div class="text-[10px] text-gray-500 font-bold">{{ k.latest.prep_elo_percentile }}th %</div>
-							</td>
-							<td class="px-8 py-5 text-center">
-								<div class="font-black text-red-400 text-xl">{{ k.latest.castle_elo }}</div>
-								<div class="text-[10px] text-gray-500 font-bold">{{ k.latest.castle_elo_percentile }}th %</div>
-							</td>
-							<td class="px-8 py-5 text-center">
-								<span :class="getPersonaClass(k)" class="px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest border">
-									{{ getPersona(k) }}
-								</span>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
+            <div v-else>
+                <section v-if="currentView === 'leaderboard'" class="animate-in fade-in slide-in-from-bottom-4 duration-700">
+                    <div class="flex flex-col md:flex-row justify-between items-end mb-8 gap-6">
+                        <div>
+                            <h1 class="text-4xl font-black italic tracking-tighter uppercase">Season {{ activeSeasonId }}</h1>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <div class="flex flex-col">
+                                <label class="text-[10px] uppercase font-black text-gray-500 mb-1 tracking-widest">Season</label>
+                                <select v-model="activeSeasonId" class="bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm outline-none focus:border-blue-500 transition cursor-pointer">
+                                    <option v-for="(s, id) in data.seasons" :key="id" :value="id">Season {{ id }}</option>
+                                </select>
+                            </div>
+                            <div class="flex flex-col">
+                                <label class="text-[10px] uppercase font-black text-gray-500 mb-1 tracking-widest">Display</label>
+                                <div class="bg-gray-800 border border-gray-700 rounded-lg flex overflow-hidden text-sm">
+                                    <button v-for="mode in ['score', 'percentile', 'rank']" 
+                                            @click="displayMode = mode"
+                                            :class="['px-4 py-2 capitalize font-bold transition', displayMode === mode ? 'bg-blue-600 text-white' : 'hover:bg-gray-700 text-gray-400']">
+                                        {{ mode }}
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-		<div v-else-if="currentKingdom" class="animate-fadeIn">
-			<nav class="mb-8 flex justify-between items-center">
-				<button @click="goHome" class="bg-gray-800 hover:bg-gray-700 text-yellow-500 px-6 py-3 rounded-2xl font-bold flex items-center gap-3 transition shadow-lg border border-gray-700">
-					<span class="text-xl">←</span> Back to Leaderboard
-				</button>
-				<div class="text-gray-600 text-sm font-mono bg-gray-800/50 px-4 py-2 rounded-lg border border-gray-700">K-ID: {{currentKingdom.id}}</div>
-			</nav>
-			
-			<div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
-				<div class="space-y-8">
-					<div class="bg-gray-800 p-8 rounded-[2.5rem] shadow-2xl border-b-[12px] border-yellow-600 relative overflow-hidden">
-						<div class="relative z-10">
-							<h2 class="text-7xl font-black mb-2 tracking-tighter italic">#{{ currentKingdom.id }}</h2>
-							<div class="mb-8">
-								<p class="text-2xl text-yellow-500 font-black uppercase tracking-widest mb-2">{{ getPersona(currentKingdom) }}</p>
-								<div class="bg-black/20 p-4 rounded-xl border border-white/5">
-									<p class="text-xs text-gray-300 leading-relaxed font-medium uppercase tracking-tighter">{{ getPersonaDescription(currentKingdom) }}</p>
-								</div>
-							</div>
-							
-							<div class="space-y-4">
-								<div v-for="type in ['prep', 'castle']" :key="type" class="bg-gray-900/80 backdrop-blur p-6 rounded-2xl border border-gray-700 flex justify-between items-center">
-									<div>
-										<div :class="type === 'prep' ? 'text-blue-400' : 'text-red-400'" class="text-[10px] uppercase font-black tracking-[0.2em] mb-1">{{ type }} Elo</div>
-										<div class="flex items-center gap-3">
-											<span class="text-4xl font-black tracking-tighter">{{ currentKingdom.latest[type + '_elo'] }}</span>
-											<span v-if="getEloDelta(currentKingdom, type)" 
-												  :class="getEloDelta(currentKingdom, type) > 0 ? 'text-green-400 bg-green-400/10 border-green-500/20' : 'text-red-400 bg-red-400/10 border-red-500/20'" 
-												  class="text-[11px] font-black px-2 py-1 rounded-lg border">
-												{{ getEloDelta(currentKingdom, type) > 0 ? '▲' : '▼' }} {{ Math.abs(getEloDelta(currentKingdom, type)) }}
-											</span>
-										</div>
-									</div>
-									<div class="text-right">
-										<div class="text-gray-500 text-[10px] uppercase font-bold tracking-widest">Global %</div>
-										<div class="text-2xl font-black text-gray-400 leading-none">{{ currentKingdom.latest[type + '_elo_percentile'] }}</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+                    <div class="overflow-x-auto bg-gray-800/50 rounded-2xl shadow-2xl border border-gray-700">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="border-b border-gray-700 bg-gray-800">
+                                    <th class="p-5 cursor-pointer hover:bg-gray-700 transition" @click="setSort('id')">
+                                        <div class="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-gray-400">
+                                            Kingdom <span v-html="getSortIcon('id')"></span>
+                                        </div>
+                                    </th>
+                                    <th v-for="type in ['prep_elo', 'castle_elo', 'overall_elo']" :key="type" 
+                                        class="p-5 cursor-pointer hover:bg-gray-700 transition" @click="setSort(type)">
+                                        <div class="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-gray-400">
+                                            {{ type.replace('_', ' ') }} <span v-html="getSortIcon(type)"></span>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="k in sortedRankings" :key="k.id" @click="navigateToKingdom(k.id)" 
+                                    class="border-b border-gray-700/50 hover:bg-blue-600/10 cursor-pointer transition group">
+                                    <td class="p-5 font-mono font-black text-blue-400 text-lg">#{{ k.id }}</td>
+                                    <td v-for="type in ['prep_elo', 'castle_elo', 'overall_elo']" class="p-5">
+                                        <div class="flex items-center gap-3">
+                                            <span class="font-bold text-gray-100">{{ getDisplayValue(k[type]) }}</span>
+                                            <span :class="['text-[10px] font-black px-1.5 py-0.5 rounded bg-black/20', getDeltaClass(k.id, type)]">
+                                                {{ getDeltaFormatted(k.id, type) }}
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
 
-					<div class="bg-gray-800 p-8 rounded-[2.5rem] shadow-xl border border-gray-700">
-						<h3 class="text-[10px] font-black uppercase tracking-[0.3em] text-gray-500 mb-6">Historical Momentum</h3>
-						<table class="w-full text-xs">
-							<thead>
-								<tr class="text-left text-gray-600 border-b border-gray-700/50">
-									<th class="pb-3 font-black">Season / Opponent</th>
-									<th class="pb-3 text-center">Prep Elo</th>
-									<th class="pb-3 text-center">Castle Elo</th>
-								</tr>
-							</thead>
-							<tbody class="divide-y divide-gray-700/30">
-								<tr v-for="(h, idx) in sortedHistory" :key="h.season" class="group hover:bg-gray-700/20 transition">
-									<td class="py-4">
-										<div class="font-black text-gray-400 uppercase tracking-tighter">S{{ h.season }}</div>
-										<div v-if="getOpponentForSeason(h.season)" class="text-[9px] text-gray-500 font-bold italic">
-											vs #{{ getOpponentForSeason(h.season) }}
-										</div>
-									</td>
-									<td class="py-4 text-center">
-										<div class="flex items-center justify-center gap-2">
-											<span class="font-bold text-gray-200">{{ h.prep_elo }}</span>
-											<span v-if="getStepDelta(idx, 'prep')" 
-												  :class="getStepDelta(idx, 'prep') > 0 ? 'text-green-500' : 'text-red-500'" 
-												  class="text-[10px] font-black">
-												{{ getStepDelta(idx, 'prep') > 0 ? '+' : '' }}{{ getStepDelta(idx, 'prep') }}
-											</span>
-										</div>
-									</td>
-									<td class="py-4 text-center">
-										<div class="flex items-center justify-center gap-2">
-											<span class="font-bold text-gray-200">{{ h.castle_elo }}</span>
-											<span v-if="getStepDelta(idx, 'castle')" 
-												  :class="getStepDelta(idx, 'castle') > 0 ? 'text-green-500' : 'text-red-500'" 
-												  class="text-[10px] font-black">
-												{{ getStepDelta(idx, 'castle') > 0 ? '+' : '' }}{{ getStepDelta(idx, 'castle') }}
-											</span>
-										</div>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
+                <section v-if="currentView === 'kingdom'" class="animate-in fade-in slide-in-from-right-4 duration-500">
+                    <div v-if="currentKingdom" class="space-y-10">
+                        <div class="bg-gray-800 p-8 rounded-3xl shadow-2xl border-l-8 border-blue-500 relative overflow-hidden">
+                            <div class="absolute top-0 right-0 p-4 opacity-5 text-9xl font-black">#{{ routeParams.id }}</div>
+                            <h1 class="text-6xl font-black italic tracking-tighter mb-2">#{{ routeParams.id }}</h1>
+                            <div class="flex items-center gap-4 mb-10">
+                                <span class="text-xs font-black uppercase tracking-[0.3em] text-gray-500">Classification</span>
+                                <span :class="['px-3 py-1 rounded-full text-xs font-black uppercase tracking-widest border', getClassStyles(classification)]">
+                                    {{ classification }}
+                                </span>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
+                                <div v-for="type in ['prep', 'castle', 'overall']" class="bg-gray-900/80 backdrop-blur p-6 rounded-2xl border border-gray-700">
+                                    <h3 class="text-[10px] font-black text-gray-500 uppercase tracking-[0.2em] mb-4">{{ type }} Metrics</h3>
+                                    
+                                    <div class="flex items-baseline gap-3 mb-4">
+                                        <div class="text-4xl font-black text-white">{{ currentSeasonRankings[type + '_elo'].score }}</div>
+                                        <div class="text-xs font-black text-gray-500 uppercase tracking-tighter">
+                                            {{ currentSeasonRankings[type + '_elo'].percentile }}% <span class="text-[10px] opacity-60"></span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="pt-4 border-t border-gray-700/50 flex justify-between items-center">
+                                        <span class="text-[10px] font-black uppercase text-gray-500 tracking-widest">Global Rank</span>
+                                        <span class="text-sm font-black text-blue-400">#{{ currentSeasonRankings[type + '_elo'].rank }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-				<div class="lg:col-span-2 space-y-8">
-					<div class="bg-gray-800 rounded-[2.5rem] shadow-2xl overflow-hidden border border-gray-700">
-						<div class="px-10 py-6 border-b border-gray-700 bg-gray-900/30">
-							<h3 class="font-black uppercase text-[10px] tracking-[0.4em] text-gray-500">Combat History Log</h3>
-						</div>
-						<div class="divide-y divide-gray-700/50">
-							<div v-for="m in currentKingdom.matches.slice(-10).reverse()" 
-								 @click="selectKingdom(getOpponentId(m))"
-								 class="flex items-center justify-between p-8 hover:bg-gray-700/30 transition cursor-pointer group">
-								<div class="flex items-center gap-8">
-									<div class="bg-gray-900 text-yellow-500 text-[10px] font-black px-3 py-2 rounded-xl border border-yellow-500/20 shadow-inner">S{{ m.season }}</div>
-									<div class="text-3xl font-black group-hover:text-yellow-500 transition-colors tracking-tighter">
-										<span class="text-gray-600 text-sm font-normal uppercase tracking-widest mr-3">vs</span>#{{ getOpponentId(m) }}
-									</div>
-								</div>
-								<div class="flex gap-4">
-									<div v-for="ph in ['prep', 'castle']" :key="ph"
-										 :title="getResultText(m, ph)" :class="getResultColor(m, ph)" 
-										 class="px-5 py-2.5 rounded-xl text-[10px] font-black uppercase tracking-[0.15em] border shadow-sm transition-all group-hover:scale-105">
-										{{ ph }} phase
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-4">
+                                <h2 class="text-2xl font-black italic tracking-tight uppercase">Battle History</h2>
+                                <div class="h-px flex-1 bg-gray-800"></div>
+                            </div>
 
-	<script>
-		const { createApp, ref, computed, onMounted } = Vue;
+                            <div class="space-y-6">
+                                <div v-for="event in reversedHistory" :key="event.date + event.type" class="relative pl-10 border-l-4 border-gray-800 pb-8 last:pb-0">
+                                    <div class="absolute -left-[14px] top-0 w-6 h-6 rounded-full bg-gray-900 border-4 border-gray-800 shadow-lg"></div>
+                                    
+                                    <div v-if="event.type === 'match'" @click="navigateToMatch(event.match_id)" 
+                                         class="bg-gray-800 p-6 rounded-2xl border border-gray-700 hover:border-blue-500 transition cursor-pointer group shadow-xl">
+                                        <div class="flex justify-between items-start mb-6">
+                                            <div>
+                                                <div class="text-[10px] font-black text-blue-500 uppercase tracking-widest mb-1">KvK Battle</div>
+                                                <h3 class="text-2xl font-black group-hover:text-blue-400 transition">Vs #{{ getOpponent(event.match_id) }}</h3>
+                                                <p class="text-xs font-bold text-gray-500">{{ event.date }} • Season {{ data.matches[event.match_id].season_id }}</p>
+                                            </div>
+                                            <div :class="['text-xs font-black px-4 py-2 rounded-lg uppercase shadow-lg', getMatchOutcomeColor(event.match_id, routeParams.id, 'overall', 'bg')]">
+                                                {{ getMatchOutcome(event.match_id, routeParams.id, 'overall') }}
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="grid grid-cols-3 gap-4 bg-gray-900/50 p-4 rounded-xl border border-gray-700/50 text-center">
+                                            <div v-for="t in ['prep', 'castle', 'overall']" :key="t">
+                                                <div class="text-[9px] text-gray-500 uppercase font-black mb-1">{{ t }}</div>
+                                                <div class="flex flex-col items-center">
+                                                    <span :class="['text-xs font-black uppercase italic', getMatchOutcomeColor(event.match_id, routeParams.id, t, 'text')]">
+                                                        {{ getMatchOutcome(event.match_id, routeParams.id, t) }}
+                                                    </span>
+                                                    <span :class="['text-[10px] font-bold opacity-80', getMatchImpactClass(event.match_id, t, routeParams.id)]">
+                                                        ({{ getMatchImpactFormatted(event.match_id, t, routeParams.id) }})
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-		const PERSONA_MAP = {
-			'Apex Predator': 'Elite-tier kingdom. Dominates both industrial output and high-stakes combat.',
-			'Rising Star': 'Rapidly improving metrics suggest a recent influx of active players or a major leadership overhaul.',
-			'Industrial Giant': 'High activity and resource depth. Often wins the week but struggles in the final combat.',
-			'Sleeping Giant': 'High-tier combat specialists who maintain a lethal, high-spec presence for the final objective despite lower activity.',
-			'Gatekeeper': 'Extremely consistent performance over multiple seasons. Acts as a performance benchmark for their tier.',
-			'Balanced Contender': 'Average performance across the board. Reliable results typically dictated by matchup Elo.',
-			'Strategic Specialist': 'High-efficiency combatants who prioritize impact and objective execution over raw industrial volume.',
-			'Paper Tiger': 'High industrial output masks a lack of combat coordination. Dangerous in the grind, weak in the field.',
-			'Faded Power': 'Historical data suggests a strong past, but recent performance indicates significant burnout or loss of key leads.',
-			'Underdeveloped': 'Lower performance in both metrics. Likely a new or casual kingdom in a rebuilding phase.'
-		};
+                                    <div v-if="event.type === 'transfer'" class="bg-gray-900/40 p-5 rounded-2xl border-2 border-dashed border-gray-800">
+                                        <div class="flex items-center justify-between">
+                                            <div class="flex items-center gap-4">
+                                                <div class="bg-gray-800 p-3 rounded-xl text-xl">✈️</div>
+                                                <div>
+                                                    <div class="font-black text-sm uppercase tracking-widest">Transfer Group {{ event.group_id }}</div>
+                                                    <p class="text-xs font-bold text-gray-500">{{ event.date }}</p>
+                                                </div>
+                                            </div>
+                                            <div v-if="isLeading(event)" class="bg-yellow-500/10 text-yellow-500 text-[10px] px-3 py-1.5 rounded-lg border border-yellow-500/20 font-black tracking-widest uppercase">
+                                                ⭐<span class="hidden md:inline">&nbsp;Leading</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-		createApp({
-			setup() {
-				const kingdoms = ref([]);
-				const search = ref('');
-				const selectedPersona = ref('All');
-				const sortKey = ref('prep_elo');
-				const sortOrder = ref(-1);
-				const selectedId = ref(null);
+                <section v-if="currentView === 'match'" class="animate-in fade-in zoom-in-95 duration-500 max-w-6xl mx-auto">
+                    <div v-if="currentMatch" class="space-y-12">
+                        <div class="text-center">
+                            <h1 class="text-5xl font-black italic tracking-tighter mb-2 uppercase">Battle Report</h1>
+                            <p class="text-gray-500 font-bold uppercase text-xs tracking-[0.3em]">Season {{ currentMatch.season_id }} Historical Engagement</p>
+                        </div>
 
-				const updateFromHash = () => {
-					const hash = window.location.hash.replace('#', '');
-					selectedId.value = hash ? parseInt(hash) : null;
-				};
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                            <div v-for="kid in [currentMatch.kingdom_a_id, currentMatch.kingdom_b_id]" :key="kid" class="space-y-6">
+                                <div class="bg-gray-800 p-8 rounded-3xl border border-gray-700 relative shadow-2xl overflow-hidden">
+                                    <div class="flex justify-between items-start mb-8">
+                                        <h2 class="text-5xl font-black hover:text-blue-400 transition cursor-pointer" @click="navigateToKingdom(kid)">#{{ kid }}</h2>
+                                        <span :class="['px-2 py-0.5 rounded text-[10px] font-black uppercase tracking-widest border', getClassStyles(getClassificationAtMatch(kid))]">
+                                            {{ getClassificationAtMatch(kid) }}
+                                        </span>
+                                    </div>
 
-				onMounted(async () => {
-					const res = await fetch('data.json');
-					kingdoms.value = await res.json();
-					updateFromHash();
-					window.addEventListener('hashchange', updateFromHash);
-				});
+                                    <div class="space-y-5">
+                                        <div v-for="type in ['prep', 'castle', 'overall']" class="flex justify-between items-center border-b border-gray-700/50 pb-2">
+                                            <div>
+                                                <div class="text-[10px] font-black text-gray-500 uppercase tracking-widest">{{ type }} Elo</div>
+                                                <div class="font-mono text-xl text-blue-400 font-bold">{{ getMatchElo(kid, type) }}</div>
+                                            </div>
+                                            <div class="text-right">
+                                                <div class="text-[9px] font-black text-gray-600 uppercase tracking-widest">Expected Win</div>
+                                                <div class="text-lg font-black text-white italic">{{ getWinProbAtMatch(kid, type) }}%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
-				const currentKingdom = computed(() => kingdoms.value.find(k => k.id === selectedId.value));
-				const sortedHistory = computed(() => currentKingdom.value ? [...currentKingdom.value.history].reverse() : []);
+                                <div class="bg-gray-800/40 rounded-2xl border border-gray-700/50 overflow-hidden shadow-xl">
+                                    <div class="bg-gray-700/30 p-3 text-[10px] font-black uppercase tracking-widest text-center text-gray-400 border-b border-gray-700/50">Outcome Detail</div>
+                                    <div class="divide-y divide-gray-700/30">
+                                        <div v-for="type in ['prep', 'castle', 'overall']" class="p-4 flex justify-between items-center">
+                                            <span class="text-[10px] font-black uppercase text-gray-500 tracking-widest">{{ type }} phase</span>
+                                            <div class="text-right">
+                                                <div :class="['text-sm font-black uppercase italic tracking-widest', getMatchOutcomeColor(routeParams.id, kid, type, 'text')]">
+                                                    {{ getMatchOutcome(routeParams.id, kid, type) }}
+                                                </div>
+                                                <div :class="['text-[10px] font-bold opacity-80', getMatchImpactClass(routeParams.id, type, kid)]">
+                                                    {{ getMatchImpactFormatted(routeParams.id, type, kid) }} pts
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-				const filteredKingdoms = computed(() => {
-					return kingdoms.value.filter(k => {
-						const matchesSearch = k.id.toString().includes(search.value);
-						const matchesPersona = selectedPersona.value === 'All' || getPersona(k) === selectedPersona.value;
-						return matchesSearch && matchesPersona;
-					}).sort((a, b) => {
-						let valA = sortKey.value === 'id' ? a.id : a.latest[sortKey.value];
-						let valB = sortKey.value === 'id' ? b.id : b.latest[sortKey.value];
-						return (valA - valB) * sortOrder.value;
-					});
-				});
+                <section v-if="currentView === 'predict'" class="animate-in fade-in slide-in-from-top-4 duration-700 max-w-4xl mx-auto space-y-12">
+                    <div class="text-center">
+                        <h1 class="text-5xl font-black tracking-tighter mb-2 italic">WIN PREDICTOR</h1>
+                        <p class="text-gray-500 font-bold uppercase text-xs tracking-widest">Calculated using current season stats</p>
+                    </div>
 
-				const getPersona = (k) => {
-					const p = parseInt(k.latest.prep_elo_percentile);
-					const c = parseInt(k.latest.castle_elo_percentile);
-					const dp = getEloDelta(k, 'prep');
-					const dc = getEloDelta(k, 'castle');
-					const totalDelta = dp + dc;
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div v-for="side in ['A', 'B']" :key="side" class="space-y-4">
+                            <label class="text-[10px] font-black text-gray-500 uppercase ml-4 tracking-widest">Kingdom {{ side }}</label>
+                            <input v-model="predictor['id' + side]" type="number" placeholder="ID #" class="w-full bg-gray-800 border-2 border-gray-700 rounded-2xl p-6 focus:border-blue-500 outline-none transition font-black text-2xl shadow-inner">
+                            <div v-if="predictorData[side]" class="bg-gray-800/50 p-4 rounded-xl border border-gray-700 space-y-2">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="text-[10px] font-black text-gray-500 uppercase">Class</span>
+                                    <span :class="['px-2 py-0.5 rounded text-[10px] font-black uppercase tracking-widest border', getClassStyles(calculateClassification(predictorData[side]))]">
+                                        {{ calculateClassification(predictorData[side]) }}
+                                    </span>
+                                </div>
+                                <div v-for="type in ['prep', 'castle', 'overall']" class="flex justify-between items-center">
+                                    <span class="text-[10px] font-black text-gray-500 uppercase">{{ type }} elo</span>
+                                    <span class="font-mono text-blue-400 font-bold">{{ predictorData[side][type + '_elo'].score }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-					if (p > 80 && c > 80) return 'Apex Predator';
-					if (totalDelta > 60) return 'Rising Star';
-					
-					if (p > 75 && c < 35) return 'Paper Tiger';
-					if (p > 75 && c < 50) return 'Industrial Giant';
-					
-					// Logic for High-Tier Castle Focus (formerly Sniper)
-					if (p < 50 && c > 75) return 'Sleeping Giant'; 
-					
-					// Logic for Mid-Tier Efficiency (formerly Sleeping Giant)
-					if (p < 40 && (c > 70 || k.latest.castle_win_rate > 0.65)) return 'Strategic Specialist';
-					
-					if (totalDelta < -60) return 'Faded Power';
-					if (Math.abs(totalDelta) < 10 && k.history.length > 3) return 'Gatekeeper';
-					
-					if (p < 35 && c < 35) return 'Underdeveloped';
-					return 'Balanced Contender';
-				};
+                    <div v-if="fullPredictorProbs" class="bg-gray-800 p-8 md:p-12 rounded-[2.5rem] border border-gray-700 shadow-2xl space-y-10">
+                        <div v-for="type in ['prep', 'castle', 'overall']" :key="type" class="space-y-4">
+                            <div class="flex justify-between font-black text-[10px] tracking-widest text-gray-500 uppercase">
+                                <span>#{{ predictor.idA }}</span>
+                                <span class="text-white bg-gray-700 px-3 py-1 rounded-full">{{ type }} win probability</span>
+                                <span>#{{ predictor.idB }}</span>
+                            </div>
+                            <div class="relative h-10 bg-gray-900 rounded-xl overflow-hidden border border-gray-700">
+                                <div class="absolute left-0 top-0 h-full bg-blue-600 transition-all duration-700" :style="{ width: fullPredictorProbs[type] + '%' }"></div>
+                                <div class="absolute inset-0 flex justify-between px-6 items-center font-black text-white text-sm">
+                                    <span>{{ fullPredictorProbs[type] }}%</span>
+                                    <span>{{ (100 - fullPredictorProbs[type]).toFixed(1) }}%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
 
-				const getEloDelta = (k, type) => {
-					if (k.history.length < 2) return 0;
-					return k.history[k.history.length - 1][type + '_elo'] - k.history[k.history.length - 2][type + '_elo'];
-				};
+    <script>
+        const { createApp, ref, reactive, computed, onMounted } = Vue;
 
-				const getStepDelta = (idx, type) => {
-					const history = sortedHistory.value;
-					if (idx >= history.length - 1) return null; 
-					return history[idx][type + '_elo'] - history[idx + 1][type + '_elo'];
-				};
+        createApp({
+            setup() {
+                const loading = ref(true);
+                const data = ref(null);
+                const currentView = ref('leaderboard');
+                const routeParams = reactive({ id: null });
+                const activeSeasonId = ref(null);
+                const displayMode = ref('score');
+                const sortKey = ref('overall_elo');
+                const sortDir = ref(-1);
+                const predictor = reactive({ idA: '', idB: '' });
 
-				const getOpponentForSeason = (season) => {
-					if (!currentKingdom.value) return null;
-					const m = currentKingdom.value.matches.find(match => match.season === season);
-					if (!m) return null;
-					return m.kingdom_a.id === selectedId.value ? m.kingdom_b.id : m.kingdom_a.id;
-				};
+                const calculateProb = (ra, rb) => (1 / (1 + Math.pow(10, (rb - ra) / 400)) * 100).toFixed(1);
+                const calculateClassification = (stats) => {
+                    if (!stats) return 'N/A';
+                    const d = stats.castle_elo.score - stats.prep_elo.score;
+                    return d > 100 ? 'Warrior' : (d < -100 ? 'Farmer' : 'Balanced');
+                };
 
-				const getOpponentId = (m) => m.kingdom_a.id === selectedId.value ? m.kingdom_b.id : m.kingdom_a.id;
-				
-				const getResultColor = (m, ph) => {
-					const winner = m[`actual_${ph}_winner`];
-					if (winner === 'Draw') return 'bg-gray-800 text-gray-500 border-gray-700';
-					const won = (m.kingdom_a.id === selectedId.value && winner === 'A') || (m.kingdom_b.id === selectedId.value && winner === 'B');
-					return won ? 'bg-green-400/10 text-green-400 border-green-500/30' : 'bg-red-400/10 text-red-400 border-red-500/30';
-				};
+                const fetchData = async () => {
+                    try {
+                        const res = await fetch('data.json');
+                        data.value = await res.json();
+                        activeSeasonId.value = data.value.metadata.current_season.toString();
+                        loading.value = false;
+                        handleRouting();
+                    } catch (e) { console.error("Error loading data:", e); }
+                };
 
-				const getResultText = (m, ph) => {
-					const winner = m[`actual_${ph}_winner`];
-					if (winner === 'Draw') return 'Result: Draw';
-					const won = (m.kingdom_a.id === selectedId.value && winner === 'A') || (m.kingdom_b.id === selectedId.value && winner === 'B');
-					return won ? `Victory over Kingdom ${getOpponentId(m)}` : `Defeat to Kingdom ${getOpponentId(m)}`;
-				};
+                const handleRouting = () => {
+                    const hash = window.location.hash || '#/';
+                    if (hash === '#/') currentView.value = 'leaderboard';
+                    else if (hash.startsWith('#/kingdom/')) { currentView.value = 'kingdom'; routeParams.id = hash.split('/')[2]; }
+                    else if (hash.startsWith('#/match/')) { currentView.value = 'match'; routeParams.id = hash.split('/')[2]; }
+                    else if (hash.startsWith('#/predict')) {
+                        currentView.value = 'predict';
+                        const p = hash.split('/');
+                        if (p[2]) predictor.idA = p[2];
+                        if (p[3]) predictor.idB = p[3];
+                    }
+                };
 
-				const sortBy = (key) => {
-					if (sortKey.value === key) sortOrder.value *= -1;
-					else { sortKey.value = key; sortOrder.value = -1; }
-				};
+                const getDelta = (kid, type, forcedMode, seasonId) => {
+                    if (!data.value) return null;
+                    const mode = forcedMode || displayMode.value;
+                    const curS = seasonId || activeSeasonId.value;
+                    const prevS = (parseInt(curS) - 1).toString();
+                    const cur = data.value.seasons[curS]?.rankings[kid]?.[type]?.[mode];
+                    const prev = data.value.seasons[prevS]?.rankings[kid]?.[type]?.[mode];
+                    return (cur !== undefined && prev !== undefined) ? (cur - prev) : null;
+                };
 
-				return { 
-					search, selectedPersona, filteredKingdoms, sortBy, selectedId, currentKingdom, sortedHistory,
-					getPersona, getPersonaDescription: (k) => PERSONA_MAP[getPersona(k)], getPersonaClass: (k) => {
-						const p = getPersona(k);
-						const classes = { 
-							'Apex Predator': 'bg-purple-900/40 text-purple-300 border-purple-500/50', 
-							'Rising Star': 'bg-green-900/40 text-green-300 border-green-500/50',
-							'Industrial Giant': 'bg-blue-900/40 text-blue-300 border-blue-500/50', 
-							'Paper Tiger': 'bg-orange-900/30 text-orange-300 border-orange-500/30',
-							'Sleeping Giant': 'bg-red-900/40 text-red-300 border-red-500/50', // High Tier Color
-							'Strategic Specialist': 'bg-indigo-900/40 text-indigo-300 border-indigo-500/50', // Mid Tier Color
-							'Gatekeeper': 'bg-slate-700/50 text-slate-300 border-slate-500',
-							'Balanced Contender': 'bg-amber-900/30 text-amber-500 border-amber-600/40',
-							'Faded Power': 'bg-red-900/20 text-red-400/60 border-red-900/50',
-							'Underdeveloped': 'bg-gray-800/50 text-gray-500 border-gray-700'
-						};
-						return classes[p] || 'bg-gray-800 text-gray-400 border-gray-700';
-					},
-					getEloDelta, getStepDelta, getOpponentForSeason, getOpponentId, getResultColor, getResultText, PERSONA_MAP,
-					selectKingdom: (id) => { window.location.hash = id; window.scrollTo(0,0); },
-					goHome: () => { window.location.hash = ''; }
-				};
-			}
-		}).mount('#app');
-	</script>
+                onMounted(fetchData);
+                window.addEventListener('hashchange', handleRouting);
 
-	<style>
-		.animate-fadeIn { animation: fadeIn 0.3s ease-out; }
-		@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-		::-webkit-scrollbar { width: 8px; }
-		::-webkit-scrollbar-track { background: #111827; }
-		::-webkit-scrollbar-thumb { background: #374151; border-radius: 4px; }
-		::-webkit-scrollbar-thumb:hover { background: #4b5563; }
-	</style>
+                return {
+                    loading, data, currentView, routeParams, activeSeasonId, displayMode, predictor,
+                    currentKingdom: computed(() => data.value?.kingdoms[routeParams.id]),
+                    reversedHistory: computed(() => data.value?.kingdoms[routeParams.id] ? [...data.value.kingdoms[routeParams.id].history].reverse() : []),
+                    currentMatch: computed(() => data.value?.matches[routeParams.id]),
+                    currentSeasonRankings: computed(() => data.value?.seasons[data.value.metadata.current_season].rankings[routeParams.id]),
+                    
+                    getDeltaFormatted: (k, t, m) => { 
+                        const d = getDelta(k, t, m); if (d === null) return '';
+                        const mode = m || displayMode.value;
+                        if (mode === 'rank') return Math.abs(d); 
+                        return d > 0 ? `+${d}` : d; 
+                    },
+                    getDeltaClass: (k, t, m) => { 
+                        const d = getDelta(k, t, m); if (!d) return 'delta-neutral';
+                        const mode = m || displayMode.value;
+                        if (mode === 'rank') return d < 0 ? 'delta-up' : 'delta-down'; 
+                        return d > 0 ? 'delta-up' : 'delta-down';
+                    },
+                    getMatchImpactFormatted: (mid, type, kid) => {
+                        const m = data.value?.matches[mid];
+                        if (!m) return '0';
+                        const d = getDelta(kid, type + '_elo', 'score', m.season_id.toString());
+                        return d !== null ? (d > 0 ? `+${d}` : d) : '0';
+                    },
+                    getMatchImpactClass: (mid, type, kid) => {
+                        const m = data.value?.matches[mid];
+                        const d = m ? getDelta(kid, type + '_elo', 'score', m.season_id.toString()) : 0;
+                        return d > 0 ? 'delta-up' : (d < 0 ? 'delta-down' : 'delta-neutral');
+                    },
+                    getMatchOutcome: (mid, kid, type = 'overall') => {
+                        const m = data.value?.matches[mid];
+                        const wid = m?.[`${type}_winner_id`];
+                        if (wid === null) return 'Split';
+                        return wid.toString() === kid.toString() ? 'Win' : 'Loss';
+                    },
+                    getMatchOutcomeColor: (mid, kid, type, part) => {
+                        const m = data.value?.matches[mid];
+                        const res = m?.[`${type}_winner_id`];
+                        const color = res === null ? 'gray' : (res.toString() === kid.toString() ? 'green' : 'red');
+                        return part === 'bg' ? `bg-${color}-500/10 text-${color}-400 border border-${color}-500/20` : `text-${color}-400`;
+                    },
+                    getMatchElo: (kid, type) => {
+                        const m = data.value?.matches[routeParams.id];
+                        const prev = (parseInt(m?.season_id) - 1).toString();
+                        return data.value?.seasons[prev]?.rankings[kid]?.[type + '_elo']?.score || '---';
+                    },
+                    getWinProbAtMatch: (kid, type) => {
+                        const m = data.value?.matches[routeParams.id];
+                        if (!m) return '50';
+                        const prev = (parseInt(m.season_id) - 1).toString();
+                        const r = data.value.seasons[prev]?.rankings;
+                        const ra = r?.[m.kingdom_a_id]?.[type + '_elo']?.score;
+                        const rb = r?.[m.kingdom_b_id]?.[type + '_elo']?.score;
+                        if (!ra || !rb) return '50';
+                        return kid.toString() === m.kingdom_a_id.toString() ? calculateProb(ra, rb) : calculateProb(rb, ra);
+                    },
+                    getClassificationAtMatch: (kid) => {
+                        const m = data.value?.matches[routeParams.id];
+                        const prev = (parseInt(m?.season_id) - 1).toString();
+                        return calculateClassification(data.value?.seasons[prev]?.rankings[kid]);
+                    },
+                    sortedRankings: computed(() => {
+                        if (!data.value) return [];
+                        const r = data.value.seasons[activeSeasonId.value].rankings;
+                        return Object.entries(r).map(([id, stats]) => ({ id, ...stats }))
+                            .sort((a, b) => {
+                                let vA = sortKey.value === 'id' ? parseInt(a.id) : a[sortKey.value].score;
+                                let vB = sortKey.value === 'id' ? parseInt(b.id) : b[sortKey.value].score;
+                                return (vA < vB ? -1 : 1) * sortDir.value;
+                            });
+                    }),
+                    setSort: (key) => { if (sortKey.value === key) sortDir.value *= -1; else { sortKey.value = key; sortDir.value = -1; }},
+                    getSortIcon: (key) => sortKey.value !== key ? '<span class="opacity-20 text-[8px]">↕</span>' : (sortDir.value === -1 ? '↓' : '↑'),
+                    getDisplayValue: (e) => displayMode.value === 'score' ? e.score : (displayMode.value === 'rank' ? '#' + e.rank : e.percentile + '%'),
+                    navigateToKingdom: (id) => window.location.hash = `#/kingdom/${id}`,
+                    navigateToMatch: (id) => window.location.hash = `#/match/${id}`,
+                    getOpponent: (mid) => { const m = data.value.matches[mid]; return m.kingdom_a_id.toString() === routeParams.id ? m.kingdom_b_id : m.kingdom_a_id; },
+                    isLeading: (event) => {
+                        const t = data.value.transfers[event.transfer_id];
+                        const g = Array.isArray(t?.groups) ? t.groups.find(g => g.number === event.group_id) : t?.groups[event.group_id];
+                        return g?.leading_kingdoms?.includes(parseInt(routeParams.id)) || false;
+                    },
+                    classification: computed(() => calculateClassification(data.value?.seasons[data.value.metadata.current_season].rankings[routeParams.id])),
+                    getClassStyles: (c) => ({'Warrior': 'text-red-400 border-red-900 bg-red-950/20', 'Farmer': 'text-green-400 border-green-900 bg-green-950/20', 'Balanced': 'text-blue-400 border-blue-900 bg-blue-950/20'}[c] || ''),
+                    predictorData: computed(() => {
+                        const cur = data.value?.seasons[data.value.metadata.current_season].rankings;
+                        return { A: cur?.[predictor.idA], B: cur?.[predictor.idB] };
+                    }),
+                    fullPredictorProbs: computed(() => {
+                        const cur = data.value?.seasons[data.value.metadata.current_season].rankings;
+                        const sA = cur?.[predictor.idA];
+                        const sB = cur?.[predictor.idB];
+                        if (!sA || !sB) return null;
+                        return {
+                            prep: calculateProb(sA.prep_elo.score, sB.prep_elo.score),
+                            castle: calculateProb(sA.castle_elo.score, sB.castle_elo.score),
+                            overall: calculateProb(sA.overall_elo.score, sB.overall_elo.score)
+                        };
+                    }),
+                    calculateClassification
+                };
+            }
+        }).mount('#app');
+    </script>
 </body>
 </html>
