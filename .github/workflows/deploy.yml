@@ -24,15 +24,12 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: '24'
-      
-      - name: Analyze Data
-        run: node scripts/analyse.js
     
       - name: Calculate Rankings
-        run: node scripts/rankings.js
+        run: node scripts/ranker.js
     
-      - name: Generate Site Data
-        run: node scripts/generate.js
+      - name: Assemble Site Data
+        run: node scripts/assemble.js
 
       - name: Setup Pages
         uses: actions/configure-pages@v6
