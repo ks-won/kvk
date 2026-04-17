@@ -49,7 +49,7 @@ async function analyze() {
         const farmers = pool.filter(k => (k.prepElo - k.castleElo) > 80).length;
         const warriors = pool.filter(k => (k.castleElo - k.prepElo) > 80).length;
 
-        report += `\nSEASON ${s}:\n`;
+        report += `\n## SEASON ${s}:\n`;
         report += `  - Population:     ${pool.length} kingdoms\n`;
         report += `  - Centrality:     Mean: ${mean.toFixed(1)} | Median: ${median.toFixed(1)}\n`;
         report += `  - Inflation:      ${prevMean ? (mean - prevMean).toFixed(2) : 'N/A'} pts from prev season\n`;
@@ -64,8 +64,8 @@ async function analyze() {
     }
 
 	// Append the Metric Interpretation Guide
-    report += `\n\n` + "=".repeat(60) + `\n`;
-    report += `HOW TO READ THIS REPORT\n`;
+    report += `\n\n---\n`;
+    report += `## HOW TO READ THIS REPORT\n`;
     report += "=".repeat(60) + `\n`;
     report += `\n1. CENTRALITY (Mean & Median)\n`;
     report += `   - Mean: The average Elo. Median: The middle-most kingdom.\n`;

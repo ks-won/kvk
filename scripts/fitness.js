@@ -86,9 +86,9 @@ async function evaluate() {
             });
         }
 
-        let report = `GRANULAR FITNESS BY MATCH COUNT\n================================\n\n`;
-        report += `Exp | Count | Phase    | Acc   | Brier | Log Loss | Upset Rate\n`;
-        report += `----|-------|----------|-------|-------|----------|-----------\n`;
+        let report = `## GRANULAR FITNESS BY MATCH COUNT\n\n`;
+        report += `| Exp | Count | Phase    | Acc   | Brier | Log Loss | Upset Rate |\n`;
+        //report += `----|-------|----------|-------|-------|----------|-----------\n`;
 
         const sortedLevels = Object.keys(statsMap).sort((a, b) => parseInt(a) - parseInt(b));
 
@@ -97,13 +97,13 @@ async function evaluate() {
             const fmtAcc = (v, total = s.count) => total > 0 ? ((v / total) * 100).toFixed(1) + '%' : '0%';
             const fmtVal = (v) => (v / s.count).toFixed(3);
 
-            report += `${lvl.toString().padEnd(3)} | ${s.count.toString().padEnd(5)} | OVERALL  | ${fmtAcc(s.overall.acc).padEnd(5)} | ${fmtVal(s.overall.brier)} | ${fmtVal(s.overall.logLoss).padEnd(8)} | ${fmtAcc(s.overall.upsets, s.overall.sigMatches)}\n`;
-            report += `    |       | PREP     | ${fmtAcc(s.prep.acc).padEnd(5)} | ${fmtVal(s.prep.brier)} | ${fmtVal(s.prep.logLoss).padEnd(8)} | ${fmtAcc(s.prep.upsets, s.prep.sigMatches)}\n`;
-            report += `    |       | CASTLE   | ${fmtAcc(s.castle.acc).padEnd(5)} | ${fmtVal(s.castle.brier)} | ${fmtVal(s.castle.logLoss).padEnd(8)} | ${fmtAcc(s.castle.upsets, s.castle.sigMatches)}\n`;
-            report += `----|-------|----------|-------|-------|----------|-----------\n`;
+            report += `${lvl.toString().padEnd(3)} | ${s.count.toString().padEnd(5)} | OVERALL  | ${fmtAcc(s.overall.acc).padEnd(5)} | ${fmtVal(s.overall.brier)} | ${fmtVal(s.overall.logLoss).padEnd(8)} | ${fmtAcc(s.overall.upsets, s.overall.sigMatches)} |\n`;
+            report += `|     |       | PREP     | ${fmtAcc(s.prep.acc).padEnd(5)} | ${fmtVal(s.prep.brier)} | ${fmtVal(s.prep.logLoss).padEnd(8)} | ${fmtAcc(s.prep.upsets, s.prep.sigMatches)} |\n`;
+            report += `|     |       | CASTLE   | ${fmtAcc(s.castle.acc).padEnd(5)} | ${fmtVal(s.castle.brier)} | ${fmtVal(s.castle.logLoss).padEnd(8)} | ${fmtAcc(s.castle.upsets, s.castle.sigMatches)} |\n`;
+            //report += `----|-------|----------|-------|-------|----------|-----------\n`;
         });
 
-        report += `\n` + "=".repeat(60) + `\nMETRIC INTERPRETATION GUIDE\n` + "=".repeat(60) + `\n`;
+        report += `\n\n## METRIC INTERPRETATION GUIDE\n` + "=".repeat(60) + `\n`;
         
         report += `1. ACCURACY (The "Winner" Check)\n`;
         report += `   The % of matches where the kingdom with the higher Elo won.\n`;
