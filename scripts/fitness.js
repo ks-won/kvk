@@ -88,7 +88,7 @@ async function evaluate() {
 
         let report = `## GRANULAR FITNESS BY MATCH COUNT\n\n`;
         report += `| Exp | Count | Phase    | Acc   | Brier | Log Loss | Upset Rate |\n`;
-        //report += `----|-------|----------|-------|-------|----------|-----------\n`;
+        report += `|-----|-------|----------|-------|-------|----------|------------|\n`;
 
         const sortedLevels = Object.keys(statsMap).sort((a, b) => parseInt(a) - parseInt(b));
 
