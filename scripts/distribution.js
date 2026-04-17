@@ -65,8 +65,7 @@ async function analyze() {
 
 	// Append the Metric Interpretation Guide
     report += `\n\n---\n`;
-    report += `## HOW TO READ THIS REPORT\n`;
-    report += "=".repeat(60) + `\n`;
+    report += `## HOW TO READ THIS REPORT\n\n`;
     report += `\n1. CENTRALITY (Mean & Median)\n`;
     report += `   - Mean: The average Elo. Median: The middle-most kingdom.\n`;
     report += `   - If Mean > Median, a few elite kingdoms are pulling the average up.\n`;
