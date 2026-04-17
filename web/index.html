@@ -86,19 +86,23 @@
                                             Kingdom <span v-html="getSortIcon('id')"></span>
                                         </div>
                                     </th>
-                                    <th v-for="type in ['prep_elo', 'castle_elo', 'overall_elo']" :key="type" 
-                                        class="p-5 cursor-pointer hover:bg-gray-700 transition" @click="setSort(type)">
+                                    <th v-for="type in ['prep_elo', 'castle_elo', 'overall_elo']" :key="type"
+                                        :class="['p-5 cursor-pointer hover:bg-gray-700 transition', type === 'overall_elo' ? 'hidden md:table-cell' : '']"
+                                        @click="setSort(type)">
                                         <div class="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-gray-400">
-                                            {{ type.replace('_', ' ') }} <span v-html="getSortIcon(type)"></span>
+                                            {{ type.replace('_elo', '') }} <span v-html="getSortIcon(type)"></span>
                                         </div>
                                     </th>
+                                    <th class="hidden md:block"></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr v-for="k in sortedRankings" :key="k.id" @click="navigateToKingdom(k.id)" 
                                     class="border-b border-gray-700/50 hover:bg-blue-600/10 cursor-pointer transition group">
                                     <td class="p-5 font-mono font-black text-blue-400 text-lg">#{{ k.id }}</td>
-                                    <td v-for="type in ['prep_elo', 'castle_elo', 'overall_elo']" class="p-5">
+                                    <td v-for="type in ['prep_elo', 'castle_elo', 'overall_elo']"
+                                        :class="['p-5', type === 'overall_elo' ? 'hidden md:table-cell' : '']"
+                                        >
                                         <div class="flex items-center gap-3">
                                             <span class="font-bold text-gray-100">{{ getDisplayValue(k[type]) }}</span>
                                             <span :class="['text-[10px] font-black px-1.5 py-0.5 rounded bg-black/20', getDeltaClass(k.id, type)]">
@@ -106,7 +110,7 @@
                                             </span>
                                         </div>
                                     </td>
-                                    <td class="p-5">
+                                    <td class="p-5 hidden md:block text-center">
                                         <span :class="['px-2 py-0.5 rounded text-[10px] font-black uppercase tracking-widest border', getClassStyles(calculateClassification(k))]">
                                             {{ calculateClassification(k) }}
                                         </span>
@@ -125,12 +129,16 @@
                         <div class="bg-gray-800 p-8 rounded-3xl shadow-2xl border-l-8 border-blue-500 relative overflow-hidden">
                             <div class="absolute top-0 right-0 p-4 opacity-5 text-9xl font-black">#{{ routeParams.id }}</div>
                             <h1 class="text-6xl font-black italic tracking-tighter mb-2">#{{ routeParams.id }}</h1>
-                            <div class="flex items-center gap-4 mb-10">
+                            <div class="flex items-center gap-4 mb-3">
                                 <span class="text-xs font-black uppercase tracking-[0.3em] text-gray-500">Classification</span>
                                 <span :class="['px-3 py-1 rounded-full text-xs font-black uppercase tracking-widest border', getClassStyles(classification)]">
                                     {{ classification }}
                                 </span>
                             </div>
+                            <div class="text-xs font-bold text-gray-400 italic mb-10">
+                                {{ getClassDescription(classification) }}
+                            </div>
+                                
                             
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
                                 <div v-for="type in ['prep', 'castle', 'overall']" class="bg-gray-900/80 backdrop-blur p-6 rounded-2xl border border-gray-700">
@@ -370,6 +378,8 @@
     <script>
         const { createApp, ref, reactive, computed, onMounted } = Vue;
 
+        const DETAILEDCLASSMODE = true; // Set to false for simpler classification
+
         createApp({
             setup() {
                 const loading = ref(true);
@@ -389,30 +399,34 @@
                 const calculateClassification = (stats) => {
                     if (!stats) return 'N/A';
 
+                    if (DETAILEDCLASSMODE) {
+                        const diff = stats.castle_elo.percentile - stats.prep_elo.percentile;
+                        const sum = stats.castle_elo.percentile + stats.prep_elo.percentile;
+
+                        if (sum > 190) return 'Apex Predator';
+
+                        if (diff > 20) { // Strong castle focus
+                            if (sum > 140) return 'Elite Vanguard';
+                            if (sum > 80) return 'Guerilla Force';
+                            return 'Scrappy Underdog';
+                        }
+                        
+                        if (diff < -20) {
+                            if (sum > 140) return 'Industrial Titan';
+                            if (sum > 80) return 'Paper Tiger';
+                            return 'Isolationist';
+                        }
+
+                        if (sum > 140) return 'Gatekeeper';
+                        if (sum > 80) return 'Contender';
+                        return 'Developing';
+                    }
+
                     const d = stats.castle_elo.percentile - stats.prep_elo.percentile;
                     if (d > 20) return 'Warrior';
                     else if (d < -20) return 'Farmer';
                     return 'Balanced';
-
-                    //const d = stats.castle_elo.score - stats.prep_elo.score;
-                    //return d > 100 ? 'Warrior' : (d < -100 ? 'Farmer' : 'Balanced');
                 };
-
-                /*
-                const calculateTier = (stats) => {
-                    if (!stats) return 'N/A';
-
-                    const s = stats.castle_elo.percentile + stats.prep_elo.percentile + stats.overall_elo.percentile;
-
-                    if (stats.overall_elo.percentile >= 99) return 'S+';
-                    else if (stats.overall_elo.percentile >= 95) return 'S';
-                    else if (stats.overall_elo.percentile >= 90) return 'A';
-                    else if (stats.overall_elo.percentile >= 80) return 'B';
-                    else if (stats.overall_elo.percentile >= 70) return 'C';
-                    else if (stats.overall_elo.percentile >= 50) return 'D';
-                    else return 'E';
-                };
-                */
 
                 const fetchData = async () => {
                     try {
@@ -569,7 +583,49 @@
                     getClassStyles: (c) => ({
                         'Warrior': 'text-red-400 border-red-900 bg-red-950/20',
                         'Farmer': 'text-green-400 border-green-900 bg-green-950/20',
-                        'Balanced': 'text-blue-400 border-blue-900 bg-blue-950/20'
+                        'Balanced': 'text-blue-400 border-blue-900 bg-blue-950/20',
+                        
+                        // --- Top Tier ---
+                        'Apex Predator': 'bg-fuchsia-950/60 text-fuchsia-300 border-fuchsia-500 shadow-[0_0_10px_rgba(217,70,239,0.2)]', // Added a subtle glow
+                        
+                        // --- Balanced ---
+                        'Gatekeeper': 'bg-slate-800 text-slate-200 border-slate-500', 
+                        'Contender': 'bg-zinc-800 text-zinc-300 border-zinc-600',
+                        'Developing': 'bg-gray-900/50 text-gray-500 border-gray-800',
+
+                        // --- Combat Focused ---
+                        'Elite Vanguard': 'bg-red-950/50 text-red-400 border-red-700',
+                        'Guerilla Force': 'bg-orange-950/50 text-orange-400 border-orange-700',
+                        'Scrappy Underdog': 'bg-amber-950/50 text-amber-400 border-amber-700',
+                        
+                        // --- Industry Heavy ---
+                        'Industrial Titan': 'bg-blue-950/50 text-blue-400 border-blue-700',
+                        'Paper Tiger': 'bg-cyan-950/50 text-cyan-400 border-cyan-700',
+                        'Isolationist': 'bg-emerald-950/50 text-emerald-400 border-emerald-800',
+
+                    }[c] || ''),
+                    getClassDescription: (c) => ({
+                        'Warrior': 'Strong castle performance, likely excels in high-stakes battles.',
+                        'Farmer': 'Strong prep performance, likely excels in resource accumulation and growth.',
+                        'Balanced': 'Even performance across both phases, adaptable to various strategies.',
+                        
+                        // --- Top Tier ---
+                        'Apex Predator': 'The absolute gold standard. These kingdoms possess both the industrial depth to win the preparation stage and the tactical lethality to dominate the battlefield.',
+    
+                        // --- Balanced ---
+                        'Gatekeeper': 'The ultimate litmus test for the elite. These are stable, high-performing kingdoms that serve as the final barrier between the average and the truly legendary.',
+                        'Contender': 'The heart of the competition. These kingdoms are solid performers that can hold their own in both preparation and battle, but may lack the consistency or edge to break into the top tier.',
+                        'Developing': 'Kingdoms in the early stages of their journey or in the process of rebuilding. Their focus is on establishing a baseline before climbing the competitive ladder.',
+
+                        // --- Combat Focused ---
+                        'Elite Vanguard': 'Top-tier combat specialists with elite coordination. Despite a modest industrial base, they possess elite-tier combat coordination, often toppling much larger opponents through superior strategy.',
+                        'Guerilla Force': 'Punching above weight. These kingdoms have a lean industrial base but achieve high combat efficiency, often outperforming expectations through agility and tactical prowess.',
+                        'Scrappy Underdog': 'Persistent combatants with high engagement vs industry. These kingdoms may have limited industrial resources but demonstrate remarkable persistence and engagement in battle, often surprising stronger opponents with their tenacity.',
+                        
+                        // --- Industry Heavy ---
+                        'Industrial Titan': 'Massive powerhouses with deep pockets and high activity. While their raw stats are intimidating, their actual combat efficiency often lags behind their industrial output.',
+                        'Paper Tiger': 'High industrial output masks a lack of coordination. These kingdoms may appear formidable on paper due to their industrial stats, but they often struggle to translate that into effective combat performance.',
+                        'Isolationist': 'Low-engagement kingdoms focused primarily on internal growth. They participate in the preparation stages but rarely show significant presence on the battlefield.',
                     }[c] || ''),
                     predictorData: computed(() => {
                         const cur = data.value?.seasons[data.value.metadata.current_season].rankings;
