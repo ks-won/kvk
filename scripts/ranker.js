@@ -13,7 +13,10 @@ const CONFIG = {
 
 let ratings = {}; 
 
-const getExpected = (ra, rb) => 1 / (1 + Math.pow(10, (rb - ra) / 400));
+const getExpected = (ra, rb) => {
+    return 1 / (1 + Math.pow(10, (rb - ra) / 400));
+};
+
 const updateElo = (current, exp, act, multiplier = 1) => {
     const delta = (CONFIG.K_FACTOR * multiplier) * (act - exp);
     return { nextElo: current + delta, delta: delta };
