@@ -106,6 +106,11 @@
                                             </span>
                                         </div>
                                     </td>
+                                    <td class="p-5">
+                                        <span :class="['px-2 py-0.5 rounded text-[10px] font-black uppercase tracking-widest border', getClassStyles(calculateClassification(k))]">
+                                            {{ calculateClassification(k) }}
+                                        </span>
+                                    </td>
                                 </tr>
                                 <tr v-if="sortedRankings.length === 0">
                                     <td colspan="4" class="p-10 text-center text-gray-500 font-bold uppercase tracking-widest text-xs">No kingdoms found</td>
@@ -383,9 +388,31 @@
                 
                 const calculateClassification = (stats) => {
                     if (!stats) return 'N/A';
-                    const d = stats.castle_elo.score - stats.prep_elo.score;
-                    return d > 100 ? 'Warrior' : (d < -100 ? 'Farmer' : 'Balanced');
+
+                    const d = stats.castle_elo.percentile - stats.prep_elo.percentile;
+                    if (d > 20) return 'Warrior';
+                    else if (d < -20) return 'Farmer';
+                    return 'Balanced';
+
+                    //const d = stats.castle_elo.score - stats.prep_elo.score;
+                    //return d > 100 ? 'Warrior' : (d < -100 ? 'Farmer' : 'Balanced');
                 };
+
+                /*
+                const calculateTier = (stats) => {
+                    if (!stats) return 'N/A';
+
+                    const s = stats.castle_elo.percentile + stats.prep_elo.percentile + stats.overall_elo.percentile;
+
+                    if (stats.overall_elo.percentile >= 99) return 'S+';
+                    else if (stats.overall_elo.percentile >= 95) return 'S';
+                    else if (stats.overall_elo.percentile >= 90) return 'A';
+                    else if (stats.overall_elo.percentile >= 80) return 'B';
+                    else if (stats.overall_elo.percentile >= 70) return 'C';
+                    else if (stats.overall_elo.percentile >= 50) return 'D';
+                    else return 'E';
+                };
+                */
 
                 const fetchData = async () => {
                     try {
@@ -539,7 +566,11 @@
                         return g?.leading_kingdoms?.includes(parseInt(routeParams.id)) || false;
                     },
                     classification: computed(() => calculateClassification(data.value?.seasons[data.value.metadata.current_season].rankings[routeParams.id])),
-                    getClassStyles: (c) => ({'Warrior': 'text-red-400 border-red-900 bg-red-950/20', 'Farmer': 'text-green-400 border-green-900 bg-green-950/20', 'Balanced': 'text-blue-400 border-blue-900 bg-blue-950/20'}[c] || ''),
+                    getClassStyles: (c) => ({
+                        'Warrior': 'text-red-400 border-red-900 bg-red-950/20',
+                        'Farmer': 'text-green-400 border-green-900 bg-green-950/20',
+                        'Balanced': 'text-blue-400 border-blue-900 bg-blue-950/20'
+                    }[c] || ''),
                     predictorData: computed(() => {
                         const cur = data.value?.seasons[data.value.metadata.current_season].rankings;
                         return { A: cur?.[predictor.idA], B: cur?.[predictor.idB] };
