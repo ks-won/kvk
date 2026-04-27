@@ -5,36 +5,43 @@
 		"groups": [
 			{
 				"number": 1,
+				"progress": "Gen 6 Heroes & Pets",
 				"min_kingdom": 1,
 				"max_kingdom": 175
 			},
 			{
 				"number": 2,
+				"progress": "Truegold 8",
 				"min_kingdom": 176,
 				"max_kingdom": 417
 			},
 			{
 				"number": 3,
+				"progress": "Gen 5 Heroes & Pets",
 				"min_kingdom": 418,
 				"max_kingdom": 674
 			},
 			{
 				"number": 4,
+				"progress": "War Academy",
 				"min_kingdom": 675,
 				"max_kingdom": 1007
 			},
 			{
 				"number": 5,
+				"progress": "Gen 4 Heroes & Pets",
 				"min_kingdom": 1008,
 				"max_kingdom": 1159
 			},
 			{
 				"number": 6,
+				"progress": "Governor Charm Level 11+",
 				"min_kingdom": 1160,
 				"max_kingdom": 1221
 			},
 			{
 				"number": 7,
+				"progress": "Truegold 5",
 				"min_kingdom": 1222,
 				"max_kingdom": 1331
 			}

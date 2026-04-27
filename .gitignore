@@ -6,3 +6,5 @@ output/*
 !output/.gitkeep
 
 web/data.json
+
+discard/
