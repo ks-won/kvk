@@ -66,17 +66,20 @@ async function assemble() {
                     prep_elo: { 
                         score: Math.round(kStats.prepElo), 
                         rank: sortedPrep.indexOf(kId) + 1, 
-                        percentile: getPct(kStats.prepElo, scoresPrep) 
+                        percentile: getPct(kStats.prepElo, scoresPrep),
+                        record: kStats.record.prep,
                     },
                     castle_elo: { 
                         score: Math.round(kStats.castleElo), 
                         rank: sortedCastle.indexOf(kId) + 1, 
-                        percentile: getPct(kStats.castleElo, scoresCastle) 
+                        percentile: getPct(kStats.castleElo, scoresCastle),
+                        record: kStats.record.castle,
                     },
                     overall_elo: { 
                         score: Math.round(kStats.overallElo), 
                         rank: sortedOverall.indexOf(kId) + 1, 
-                        percentile: getPct(kStats.overallElo, scoresOverall) 
+                        percentile: getPct(kStats.overallElo, scoresOverall),
+                        record: kStats.record.overall,
                     }
                 };
             });

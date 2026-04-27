@@ -89,13 +89,7 @@ async function run() {
                         ratings[k.id] = { 
                             prepElo: initVal, castleElo: initVal, overallElo: initVal, 
                             confidence: 0.1, matchesPlayed: 0, 
-                            oppEloHistory: [],
-                            record: {
-                                prep: { win: 0, lose: 0, draw: 0, percent: 0, sos: 0, sov: 0, sol: 0 },
-                                castle: { win: 0, lose: 0, draw: 0, percent: 0, sos: 0, sov: 0, sol: 0 },
-                                overall: { win: 0, lose: 0, draw: 0, percent: 0, sos: 0, sov: 0, sol: 0 }
-                            },
-                            matchups: { prep: [], castle: [], overall: [] }
+                            oppEloHistory: [] 
                         };
                     }
                     if (!seasonLogs[k.id]) seasonLogs[k.id] = [];
@@ -121,25 +115,6 @@ async function run() {
                 const multA = isSweepA ? 1.5 : 1;
                 const multB = isSweepB ? 1.5 : 1;
                 const actOverA = isSweepA ? 1 : (isSweepB ? 0 : 0.5);
-
-                // 4.1 Update cumulative Win/Loss/Draw records
-                const updateRecord = (id, oppId, cat, result) => {
-                    const r = ratings[id].record[cat];
-                    if (result === 1) r.win++;
-                    else if (result === 0) r.lose++;
-                    else r.draw++;
-                    // Track matchup to calculate SOS/SOV/SOL later
-                    ratings[id].matchups[cat].push({ oppId, result });
-                };
-
-                updateRecord(a, b, 'prep', pW == a ? 1 : (pW == b ? 0 : 0.5));
-                updateRecord(b, a, 'prep', pW == b ? 1 : (pW == a ? 0 : 0.5));
-                
-                updateRecord(a, b, 'castle', cW == a ? 1 : (cW == b ? 0 : 0.5));
-                updateRecord(b, a, 'castle', cW == b ? 1 : (cW == a ? 0 : 0.5));
-                
-                updateRecord(a, b, 'overall', actOverA);
-                updateRecord(b, a, 'overall', 1 - actOverA);
 
                 // 5. Compute Deltas
                 const resP_A = updateElo(ratings[a].prepElo, expPrepA, pW == a ? 1 : 0, 1, trendMultA);
@@ -173,52 +148,10 @@ async function run() {
                 }
             });
 
-            // Calculate Win/Loss Percentages for the season to date
-            Object.keys(ratings).forEach(id => {
-                ['prep', 'castle', 'overall'].forEach(cat => {
-                    const r = ratings[id].record[cat];
-                    const total = r.win + r.lose + r.draw;
-                    r.percent = total > 0 ? (r.win + 0.5 * r.draw) / total : 0;
-                });
-            });
-
-            // Calculate SOS, SOV, and SOL based on the newly calculated percentages
-            Object.keys(ratings).forEach(id => {
-                ['prep', 'castle', 'overall'].forEach(cat => {
-                    const r = ratings[id].record[cat];
-                    const matchups = ratings[id].matchups[cat];
-                    
-                    let sosSum = 0, sovSum = 0, solSum = 0;
-                    let sosCount = 0, sovCount = 0, solCount = 0;
-
-                    matchups.forEach(m => {
-                        if (ratings[m.oppId]) {
-                            const oppPercent = ratings[m.oppId].record[cat].percent;
-                            
-                            sosSum += oppPercent;
-                            sosCount++;
-
-                            if (m.result === 1) {
-                                sovSum += oppPercent;
-                                sovCount++;
-                            } else if (m.result === 0) {
-                                solSum += oppPercent;
-                                solCount++;
-                            }
-                        }
-                    });
-
-                    r.sos = sosCount > 0 ? sosSum / sosCount : 0;
-                    r.sov = sovCount > 0 ? sovSum / sovCount : 0;
-                    r.sol = solCount > 0 ? solSum / solCount : 0;
-                });
-            });
-
             // Map logs to history object
             history[seasonNumber] = JSON.parse(JSON.stringify(ratings));
             Object.keys(history[seasonNumber]).forEach(id => {
                 history[seasonNumber][id].match_history = seasonLogs[id] || [];
-                delete history[seasonNumber][id].matchups; // Exclude internal matchup tracker from final JSON output
             });
         }
 
