@@ -7,43 +7,50 @@
 				"number": 1,
 				"progress": "Gen 6 Heroes & Pets",
 				"min_kingdom": 1,
-				"max_kingdom": 175
+				"max_kingdom": 175,
+				"leading_kingdoms": [12, 40, 45, 57, 86, 90, 138, 163]
 			},
 			{
 				"number": 2,
 				"progress": "Truegold 8",
 				"min_kingdom": 176,
-				"max_kingdom": 417
+				"max_kingdom": 417,
+				"leading_kingdoms": [199, 201, 210, 231, 240, 255, 267, 354]
 			},
 			{
 				"number": 3,
 				"progress": "Gen 5 Heroes & Pets",
 				"min_kingdom": 418,
-				"max_kingdom": 674
+				"max_kingdom": 674,
+				"leading_kingdoms": [423, 455, 460, 497, 550, 576, 623, 652]
 			},
 			{
 				"number": 4,
 				"progress": "War Academy",
 				"min_kingdom": 675,
-				"max_kingdom": 1007
+				"max_kingdom": 1007,
+				"leading_kingdoms": [685, 709, 710, 719, 737, 746, 759, 772]
 			},
 			{
 				"number": 5,
 				"progress": "Gen 4 Heroes & Pets",
 				"min_kingdom": 1008,
-				"max_kingdom": 1159
+				"max_kingdom": 1159,
+				"leading_kingdoms": [1019, 1041, 1075, 1079, 1095, 1100, 1116, 1126]
 			},
 			{
 				"number": 6,
 				"progress": "Governor Charm Level 11+",
 				"min_kingdom": 1160,
-				"max_kingdom": 1221
+				"max_kingdom": 1221,
+				"leading_kingdoms": [1161, 1163, 1182, 1186, 1210, 1213, 1219]
 			},
 			{
 				"number": 7,
 				"progress": "Truegold 5",
 				"min_kingdom": 1222,
-				"max_kingdom": 1331
+				"max_kingdom": 1331,
+				"leading_kingdoms": [1235, 1244, 1245, 1247, 1249, 1266, 1272, 1277]
 			}
 		]
 	},
