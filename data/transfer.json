@@ -1,5 +1,87 @@
 [
 	{
+		"number": 7,
+		"date": "2026-07-18",
+		"groups": [
+			{
+				"number": 1,
+				"progress": "TG8 - Gen 7",
+				"min_kingdom": 1,
+				"max_kingdom": 235,
+				"power_cap_normal": 400000000,
+				"power_cap_leading": 250000000,
+				"leading_kingdoms": [57, 86, 90, 162, 172, 199, 231, 235],
+				"inactive_kingdoms": [50, 59, 63, 76, 92, 95, 99, 127, 129, 130]
+			},
+			{
+				"number": 2,
+				"progress": "TG8 - Gen 6",
+				"min_kingdom": 236,
+				"max_kingdom": 758,
+				"power_cap_normal": 340000000,
+				"power_cap_leading": 213000000,
+				"leading_kingdoms": [240, 255, 278, 321, 354, 373, 401, 524],
+				"inactive_kingdoms": [288, 386, 480, 485, 487]
+			},
+			{
+				"number": 3,
+				"progress": "TG8 - Gen 5",
+				"min_kingdom": 759,
+				"max_kingdom": 927,
+				"power_cap_normal": 270000000,
+				"power_cap_leading": 170000000,
+				"leading_kingdoms": [766, 772, 777, 832, 846, 900, 923, 924],
+				"inactive_kingdoms": [760, 787]
+			},
+			{
+				"number": 4,
+				"progress": "TG5 + WA - Gen 5",
+				"min_kingdom": 928,
+				"max_kingdom": 1221,
+				"power_cap_normal": 230000000,
+				"power_cap_leading": 145000000,
+				"leading_kingdoms": [986, 988, 1035, 1057, 1067, 1079, 1159, 1210],
+				"inactive_kingdoms": [1032, 1093]
+			},
+			{
+				"number": 5,
+				"progress": "TG5 + WA - Gen 4",
+				"min_kingdom": 1222,
+				"max_kingdom": 1426,
+				"power_cap_normal": 200000000,
+				"power_cap_leading": 130000000,
+				"leading_kingdoms": [1245, 1250, 1260, 1269, 1273, 1274, 1286, 1339]
+			},
+			{
+				"number": 6,
+				"progress": "TG5 + RG - Gen 4",
+				"min_kingdom": 1427,
+				"max_kingdom": 1558,
+				"power_cap_normal": 170000000,
+				"power_cap_leading": 110500000,
+				"leading_kingdoms": [1433, 1444, 1455, 1470, 1494, 1510, 1527, 1556]
+			},
+			{
+				"number": 7,
+				"progress": "TG5 + RG - Gen 3",
+				"min_kingdom": 1559,
+				"max_kingdom": 1627,
+				"power_cap_normal": 150000000,
+				"power_cap_leading": 97500000,
+				"leading_kingdoms": [1588, 1593, 1597, 1599, 1612, 1621, 1625]
+			},
+			{
+				"number": 8,
+				"progress": "TG5 - Gen 3",
+				"min_kingdom": 1628,
+				"max_kingdom": 1766,
+				"power_cap_normal": 130000000,
+				"power_cap_leading": 84500000,
+				"leading_kingdoms": [1634, 1636, 1650, 1659, 1664, 1684, 1690, 1747]
+			}
+		]
+	},
+	{
 		"number": 6,
 		"date": "2026-06-06",
 		"groups": [
